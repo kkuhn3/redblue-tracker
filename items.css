@@ -1,0 +1,202 @@
+/* Badges, Row 1 */
+#ITEM_BADGE_1 {
+	background-image: url(./images/items/badge01.png);
+}
+#ITEM_BADGE_2 {
+	background-image: url(./images/items/badge02.png);
+}
+#ITEM_BADGE_3 {
+	background-image: url(./images/items/badge03.png);
+}
+#ITEM_BADGE_4 {
+	background-image: url(./images/items/badge04.png);
+}
+#ITEM_BADGE_5 {
+	background-image: url(./images/items/badge05.png);
+}
+#ITEM_BADGE_6 {
+	background-image: url(./images/items/badge06.png);
+}
+#ITEM_BADGE_7 {
+	background-image: url(./images/items/badge07.png);
+}
+#ITEM_BADGE_8 {
+	background-image: url(./images/items/badge08.png);
+}
+
+/* HMs, Row 2 */
+#ITEM_HM_CUT {
+	background-image: url(./images/items/hm01.png);
+}
+#ITEM_HM_FLY {
+	background-image: url(./images/items/hm02.png);
+}
+#ITEM_HM_SURF {
+	background-image: url(./images/items/hm03.png);
+}
+#ITEM_HM_STRENGTH {
+	background-image: url(./images/items/hm04.png);
+}
+#ITEM_HM_FLASH {
+	background-image: url(./images/items/hm05.png);
+}
+#ITEM_HM_ROCK_SMASH {
+	background-image: url(./images/items/hm06.png);
+}
+#ITEM_HM_WATERFALL {
+	background-image: url(./images/items/hm07.png);
+}
+#ITEM_HM_DIVE {
+	background-image: url(./images/items/hm08.png);
+}
+
+/* Plot, Row 3 */
+#ITEM_DEVON_GOODS {
+	background-image: url(./images/items/devongoods.png);
+}
+#ITEM_LETTER {
+	background-image: url(./images/items/letter.png);
+}
+#ITEM_METEORITE {
+	background-image: url(./images/items/meteorite.png);
+}
+#ITEM_GO_GOGGLES {
+	background-image: url(./images/items/gogoggles.png);
+}
+#ITEM_DEVON_SCOPE {
+	background-image: url(./images/items/devonscope.png);
+}
+#ITEM_MAGMA_EMBLEM {
+	background-image: url(./images/items/magmaemblem.png);
+}
+#ITEM_ITEMFINDER {
+	background-image: url(./images/items/itemfinder.png);
+}
+#ITEM_ACRO_BIKE {
+	background-image: url(./images/items/acrobike.png);
+}
+#ITEM_MACH_BIKE {
+	background-image: url(./images/items/machbike.png);
+}
+#ITEM_SS_TICKET {
+	background-image: url(./images/items/ssticket.png);
+}
+
+/* Side Quests, Row 4 */
+#ITEM_ROOM_1_KEY {
+	background-image: url(./images/items/rm1key.png);
+}
+#ITEM_ROOM_2_KEY {
+	background-image: url(./images/items/rm2key.png);
+}
+#ITEM_ROOM_4_KEY {
+	background-image: url(./images/items/rm4key.png);
+}
+#ITEM_ROOM_6_KEY {
+	background-image: url(./images/items/rm6key.png);
+}
+#ITEM_STORAGE_KEY {
+	background-image: url(./images/items/storagekey.png);
+}
+#ITEM_SCANNER {
+	background-image: url(./images/items/scanner.png);
+}
+#ITEM_BASEMENT_KEY {
+	background-image: url(./images/items/basementkey.png);
+}
+#ITEM_POKEBLOCK_CASE {
+	background-image: url(./images/items/pokeblockcase.png);
+}
+#ITEM_WAILMER_PAIL {
+	background-image: url(./images/items/wailmerpail.png);
+}
+#ITEM_MYSTIC_TICKET {
+	background-image: url(./images/items/mysticticket.png);
+}
+
+
+/* Settings, not really items but similar enough */
+#BERRY_TREES._0 {
+	background-image: url(./images/settings/hideberry.png);
+}
+#BERRY_TREES._1 {
+	background-image: url(./images/settings/showberry.png);
+}
+#HIDDEN_ITEMS._0 {
+	background-image: url(./images/settings/hidehidden.png);
+}
+#HIDDEN_ITEMS._1 {
+	background-image: url(./images/settings/showhidden.png);
+}
+#NORMAN_REQ._0 {
+	background-image: url(./images/settings/norman_badges.png);
+}
+#NORMAN_REQ._1 {
+	background-image: url(./images/settings/norman_gyms.png);
+}
+#NORMAN_COUNT._0 {
+	background-image: url(./images/settings/norman_0.png);
+}
+#NORMAN_COUNT._1 {
+	background-image: url(./images/settings/norman_1.png);
+}
+#NORMAN_COUNT._2 {
+	background-image: url(./images/settings/norman_2.png);
+}
+#NORMAN_COUNT._3 {
+	background-image: url(./images/settings/norman_3.png);
+}
+#NORMAN_COUNT._4 {
+	background-image: url(./images/settings/norman_4.png);
+}
+#NORMAN_COUNT._5 {
+	background-image: url(./images/settings/norman_5.png);
+}
+#NORMAN_COUNT._6 {
+	background-image: url(./images/settings/norman_6.png);
+}
+#NORMAN_COUNT._7 {
+	background-image: url(./images/settings/norman_7.png);
+}
+#E4_REQ._0 {
+	background-image: url(./images/settings/e4_badges.png);
+}
+#E4_REQ._1 {
+	background-image: url(./images/settings/e4_gyms.png);
+}
+#E4_COUNT._0 {
+	background-image: url(./images/settings/e4_0.png);
+}
+#E4_COUNT._1 {
+	background-image: url(./images/settings/e4_1.png);
+}
+#E4_COUNT._2 {
+	background-image: url(./images/settings/e4_2.png);
+}
+#E4_COUNT._3 {
+	background-image: url(./images/settings/e4_3.png);
+}
+#E4_COUNT._4 {
+	background-image: url(./images/settings/e4_4.png);
+}
+#E4_COUNT._5 {
+	background-image: url(./images/settings/e4_5.png);
+}
+#E4_COUNT._6 {
+	background-image: url(./images/settings/e4_6.png);
+}
+#E4_COUNT._7 {
+	background-image: url(./images/settings/e4_7.png);
+}
+#E4_COUNT._8 {
+	background-image: url(./images/settings/e4_8.png);
+}
+#VICTORY_EVENT._0 {
+	background-image: url(./images/settings/victory_0.png);
+}
+#VICTORY_EVENT._1 {
+	background-image: url(./images/settings/victory_1.png);
+}
+#VICTORY_EVENT._2 {
+	background-image: url(./images/settings/victory_2.png);
+}

@@ -1,0 +1,37 @@
+body { 
+  font-family: sans-serif; 
+}
+
+html {
+  background-color: #d3dfeb;
+}
+  
+label { 
+  width: 210px; 
+  display: inline-block; 
+}
+
+div { 
+  background-color: #d3dfeb;
+  padding: 5px;
+}
+
+select {
+  width: 180px;
+}
+
+input[type='text'] {
+  width: 176px;
+  padding-block: 0px;
+  padding-inline: 0px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  width: 390px;
+  text-align: center;
+  font-weight: bold;
+}

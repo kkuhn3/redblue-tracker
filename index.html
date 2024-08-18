@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<title>Red/Blue Tracker</title>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="locations.css">
+	<link rel="stylesheet" href="items.css">
+	<script src="static/locationType.js" type="text/javascript"></script>
+	<script src="index.js" type="text/javascript"></script>
+	<script src="logic.js" type="text/javascript"></script>
+	<script src="sync.js" type="text/javascript"></script>
+	<body>
+		<div id="leftCol">
+			<div id="settings">
+				<div class="setting notImageImage" id="CHECK_CHECKED">0</div>
+				<div class="setting notImageImage" id="CHECK_LOGICAL">50</div>
+				<div class="setting notImageImage" id="CHECK_TOTAL">300</div>
+			</div>
+			<div id="items">
+				<img class="item largerItem" id="Boulder_Badge">
+				<img class="item largerItem" id="Cascade_Badge">
+				<img class="item largerItem" id="Thunder_Badge">
+				<img class="item largerItem" id="Rainbow_Badge">
+				<img class="item largerItem" id="Soul_Badge">
+				<img class="item largerItem" id="Marsh_Badge">
+				<img class="item largerItem" id="Volcano_Badge">
+				<img class="item largerItem" id="Earth_Badge">
+				<img class="item largerItem" id="HM05_Flash">
+				<img class="item largerItem" id="HM01_Cut">
+				<img class="item largerItem" id="HM02_Fly">
+				<img class="item largerItem" id="HM04_Strength">
+				<img class="item largerItem" id="HM03_Surf">
+				<img class="notItem largerItem" >
+				<img class="notItem largerItem" >
+				<img class="notItem largerItem" >
+			</div>
+			<div id="itemHoverDesc">
+				&nbsp
+			</div>
+			<div id="groupBreakDown">
+
+			</div>
+		</div>
+
+		<div id="map">
+			<img id="kanto" style="background-image:url(./images/kanto-compressed.png)" src="./images/kanto.png">
+			<!---------------------------------------------------------------------------->
+			<!--Cities-->
+			<!---------------------------------------------------------------------------->
+			<!--Pallet Town-->
+			<div class="location" id="PC_Item"></div>
+			<div class="location" id="Event_Rivals_Sister"></div>
+			<div class="group" id="oaks_lab">
+				<div class="sub" id="Event_Oaks_Gift"></div>
+			</div>
+			<!--Viridian City-->
+			<div class="location" id="Event_Sleepy_Guy"></div>
+			<div class="location" id="Event_Pokemart_Quest"></div>
+			<div class="group" id="viridian_gym">
+				<div class="sub" id="Event_Viridian_Gym"></div>
+			</div>
+			<!--Pewter City-->
+			<div class="location" id="Event_Museum"></div>
+			<div class="group" id="pewter_gym">
+				<div class="sub" id="Event_Pewter_Gym"></div>
+			</div>
+			<!--Cerulean City-->
+			<div class="location" id="Event_Bicycle_Shop"></div>
+			<div class="group" id="cerulean_gym">
+				<div class="sub" id="Event_Cerulean_Gym"></div>
+			</div>
+			<div class="location" id="Event_Rocket_Thief"></div>
+			<!--Vermilion City-->
+			<div class="location" id="Rod_Vermilion_City_Fishing_Guru"></div>
+			<div class="location" id="Event_Pokemon_Fan_Club"></div>
+			<div class="group" id="vermillion_gym">
+				<div class="sub" id="Event_Vermillion_Gym"></div>
+			</div>
+			<div class="group" id="ss_anne">
+				<div class="sub" id="Event_SS_Anne_Captain"></div>
+			</div>
+			<!--Lavender Town-->
+			<div class="location" id="Event_Fuji"></div>
+			<!--Celadon City-->
+			<div class="location" id="Event_Mansion_Lady"></div>
+			<div class="location" id="Event_Stranded_Man"></div>
+			<div class="group" id="celadon_department_store">
+				<div class="sub" id="Event_Counter"></div>
+				<div class="sub" id="Event_Thirsty_Girl_Water"></div>
+				<div class="sub" id="Event_Thirsty_Girl_Soda"></div>
+				<div class="sub" id="Event_Thirsty_Girl_Lemonade"></div>
+			</div>
+			<div class="location" id="Event_Gambling_Addict"></div>
+			<div class="group" id="celadon_gym">
+				<div class="sub" id="Event_Celadon_Gym"></div>
+			</div>
+			<!--Saffron City-->
+			<div class="group" id="silph_co">
+				<div class="sub" id="Event_Scared_Woman"></div>
+				<div class="sub" id="Event_Silph_Co_President"></div>
+			</div>
+			<div class="location" id="Event_Copycat"></div>
+			<div class="location" id="Event_Mr_Psychic"></div>
+			<div class="group" id="saffron_gym">
+				<div class="sub" id="Event_Saffron_Gym"></div>
+			</div>
+			<!--Fuchsia City-->
+			<div class="location" id="Rod_Fuchsia_City_Fishing_Brother"></div>
+			<div class="location" id="Event_Warden"></div>
+			<div class="group" id="fuchsia_gym">
+				<div class="sub" id="Event_Fuschia_Gym"></div>
+			</div>
+			<div class="group" id="safari_zone">
+				<div class="sub" id="Event_Safari_Zone_Secret_House"></div>
+			</div>
+			<!--Cinnabar Island-->
+			<div class="location" id="Event_Lab_Scientist"></div>
+			<div class="group" id="cinnabar_gym">
+				<div class="sub" id="Event_Cinnabar_Gym"></div>
+			</div>
+			<!---------------------------------------------------------------------------->
+			<!--Routes-->
+			<!---------------------------------------------------------------------------->
+			<!--1-->
+			<div class="location" id="Event_Free_Sample"></div>
+			<!--2-->
+			<div class="location" id="Event_Route_2_Oaks_Aide"></div>
+			<div class="location" id="Missable_Route_2_Item_1"></div>
+			<div class="location" id="Missable_Route_2_Item_2"></div>
+			<!--4-->
+			<div class="group" id="mt_moon">
+				<div class="sub" id="Event_Dome_Fossil"></div>
+				<div class="sub" id="Event_Helix_Fossil"></div>
+			</div>
+			<!--11-->
+			<div class="location" id="Event_Rt11_Oaks_Aide"></div>
+			<!--12-->
+			<div class="location" id="Rod_Route12_Fishing_Brother"></div>
+			<div class="location" id="Event_Mourning_Girl"></div>
+			<!--15-->
+			<div class="location" id="Event_Rt_15_Oaks_Aide"></div>
+			<!--16-->
+			<div class="location" id="Event_Rt16_House_Woman"></div>
+			<!--24-->
+			<div class="location" id="Event_Nugget_Bridge"></div>
+			<!--25-->
+			<div class="group" id="bills_house">
+				<div class="sub" id="Event_Bill"></div>
+			</div>
+			<!-- The on hover blurb -->
+			<div id="idViewer"></div>
+		</div>
+	</body>
+	<script>
+		addOnClick();
+		parseSettings();
+		updateLocations();
+		updateGroups();
+		countchecks();
+		(async() => {
+			await loadStaticContent();
+			connect();
+		})()
+	</script>
+<html>

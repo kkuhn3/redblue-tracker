@@ -1,0 +1,193 @@
+/*** Cities ***/
+/*Pallet Town*/
+#PC_Item {
+	left: 18.352900552486187%;
+	top: 66.40193370165746%;
+}
+#Event_Rivals_Sister {
+	left: 20.5628453038674%;
+	top: 66.40193370165746%;
+}
+#oaks_lab {
+	left: 20.28660220994475%;
+	top: 68.05939226519337%;
+}
+/*Viridian City*/
+#Event_Sleepy_Guy {
+	left: 15.86671270718232%;
+	top: 51.46754143646409%;
+}
+#Event_Pokemart_Quest {
+	left: 22.220303867403313%;
+	top: 50.36256906077348%;
+}
+#viridian_gym {
+	left: 23.04903314917127%;
+	top: 47.04765193370166%;
+}
+/*Pewter City*/
+#Event_Museum {
+	left: 19.457872928176794%;
+	top: 16.660911602209943%;
+}
+#pewter_gym {
+	left: 18.62914364640884%;
+	top: 19.97582872928177%;
+}
+/*Cerulean City*/
+#Event_Bicycle_Shop {
+	left: 67.52417127071823%;
+	top: 17.213397790055247%;
+}
+#cerulean_gym {
+	left: 72.22030386740332%;
+	top: 15.555939226519337%;
+}
+#Event_Rocket_Thief {
+	left: 72.23756906077348%;
+	top: 12.517265193370166%;
+}
+/*Vermilion City*/
+#Rod_Vermilion_City_Fishing_Guru {
+	left: 65.86671270718232%;
+	top: 50.89779005524862%;
+}
+#Event_Pokemon_Fan_Club {
+	left: 66.41919889502762%;
+	top: 53.677486187845304%;
+}
+#vermillion_gym {
+	left: 67.26519337016575%;
+	top: 55.334944751381215%;
+}
+#ss_anne {
+	left: 69.04350828729281%;
+	top: 58.75345303867403%;
+}
+/*Lavender Town*/
+#Event_Fuji {
+	left: 92.3860497237569%;
+	top: 35.99792817679558%;
+}
+/*Celadon City*/
+#Event_Mansion_Lady {
+	left: 51.24309392265193%;
+	top: 32.68301104972375%;
+}
+#Event_Stranded_Man {
+	left: 50.690607734806626%;
+	top: 34.65124309392265%;
+}
+#celadon_department_store {
+	left: 47.35842541436464%;
+	top: 33.78798342541436%;
+}
+#Event_Gambling_Addict {
+	left: 53.15953038674033%;
+	top: 37.655386740331494%;
+}
+#celadon_gym {
+	left: 47.91091160220994%;
+	top: 37.655386740331494%;
+}
+/*Saffron City*/
+#silph_co {
+	left: 68.92265193370166%;
+	top: 35.99792817679558%;
+}
+#Event_Copycat {
+	left: 65.86671270718232%;
+	top: 31.57803867403315%;
+}
+#Event_Mr_Psychic {
+	left: 71.94406077348066%;
+	top: 38.2078729281768%;
+}
+#saffron_gym {
+	left: 73.34254143646409%;
+	top: 31.025552486187845%;
+}
+/*Fuchsia City*/
+#Rod_Fuchsia_City_Fishing_Brother {
+	left: 55.93922651933701%;
+	top: 82.4067679558011%;
+}
+#Event_Warden {
+	left: 54.81698895027624%;
+	top: 82.4067679558011%;
+}
+#fuchsia_gym {
+	left: 48.7396408839779%;
+	top: 82.4067679558011%;
+}
+#safari_zone {
+	left: 52.34806629834254%;
+	top: 75.77693370165746%;
+}
+/*Cinnabar Island*/
+#Event_Lab_Scientist {
+	left: 18.62914364640884%;
+	top: 97.3238950276243%;
+}
+#cinnabar_gym {
+	left: 21.94406077348066%;
+	top: 95.66643646408839%;
+}
+/*** Routes ***/
+/*1*/
+#Event_Free_Sample {
+	left: 18.370165745856355%;
+	top: 61.7403314917127%;
+}
+/*2*/
+#Event_Route_2_Oaks_Aide {
+	left: 21.132596685082873%;
+	top: 35.99792817679558%;
+}
+#Missable_Route_2_Item_1 {
+	left: 1191px;
+	top: 2328px;
+}
+#Missable_Route_2_Item_2 {
+	left: 1191px;
+	top: 2184px;
+}
+/*4*/
+#mt_moon {
+	left: 44.078038674033145%;
+	top: 13.91574585635359%;
+}
+/*11*/
+#Event_Rt11_Oaks_Aide {
+	left: 89.69267955801105%;
+	top: 54.59254143646409%;
+}
+/*12*/
+#Rod_Route12_Fishing_Brother {
+	left: 94.59599447513811%;
+	top: 58.6671270718232%;
+}
+#Event_Mourning_Girl {
+	left: 94.33701657458563%;
+	top: 43.18024861878453%;
+}
+/*15*/
+#Event_Rt_15_Oaks_Aide {
+	left: 61.30870165745856%;
+	top: 79.47168508287292%;
+}
+/*16*/
+#Event_Rt16_House_Woman {
+	left: 35.47997237569061%;
+	top: 33.78798342541436%;
+}
+/*24*/
+#Event_Nugget_Bridge {
+	left: 69.73411602209944%;
+	top: 4.523480662983426%;
+}
+/*25*/
+#bills_house {
+	left: 84.66850828729281%;
+	top: 1.1912983425414365%;
+}
