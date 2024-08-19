@@ -163,12 +163,12 @@ function setSettingClass(div, className) {
 function hideToMatch(div, prefix) {
 	let show = parseInt(div.classList[1].substring(1), 10);
 	for (let location of document.getElementsByClassName("location")) {
-		if (location.id.substring(0,prefix.length) === prefix && !keyItems.includes(location.id)) {
+		if (location.id.substring(0,prefix.length) === prefix) {
 			ifTrueAddClass(location, !show, "hiddenhidden");
 		}
 	}
 	for (let sub of document.getElementsByClassName("sub")) {
-		if (sub.id.substring(0,prefix.length) === prefix && !keyItems.includes(sub.id)) {
+		if (sub.id.substring(0,prefix.length) === prefix) {
 			ifTrueAddClass(sub, !show, "hiddenhidden");
 		}
 	}

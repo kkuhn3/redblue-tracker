@@ -42,26 +42,30 @@ body {
 	float: left;
 }
 .item {
-	width: 2vw;
-	height: 2vw;
+	width: 2.5vw;
+	height: 2.5vw;
 	background-size: contain;
 	float: left;
 	filter: grayscale(100%);
 	cursor: pointer;
 	background-color: #293541;
+	background-repeat: no-repeat;
+    background-position: center;
 }
 .notItem {
-	width: 2vw;
-	height: 2vw;
+	width: 2.5vw;
+	height: 2.5vw;
 	background-size: contain;
 	float: left;
 	filter: grayscale(100%);
 	background-color: #293541;
 }
+/*
 .largerItem {
 	width: 2.5vw;
 	height: 2.5vw;
 }
+*/
 .itemchecked {
 	filter: grayscale(0%);
 }
@@ -70,7 +74,7 @@ body {
 #itemHoverDesc {
 	color: silver;
 	padding: .5vw;
-	width: 19vw;
+	width: 18.95vw;
 	float: left;
 	overflow-x: hidden;
 	user-select: none;

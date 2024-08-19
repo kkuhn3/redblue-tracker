@@ -11,27 +11,44 @@
 	<body>
 		<div id="leftCol">
 			<div id="settings">
+				<img class="setting _0" id="HIDDEN_ITEMS" onclick="settingOnClick(this, 'Hidden_Item_')">
 				<div class="setting notImageImage" id="CHECK_CHECKED">0</div>
 				<div class="setting notImageImage" id="CHECK_LOGICAL">50</div>
 				<div class="setting notImageImage" id="CHECK_TOTAL">300</div>
 			</div>
 			<div id="items">
-				<img class="item largerItem" id="Boulder_Badge">
-				<img class="item largerItem" id="Cascade_Badge">
-				<img class="item largerItem" id="Thunder_Badge">
-				<img class="item largerItem" id="Rainbow_Badge">
-				<img class="item largerItem" id="Soul_Badge">
-				<img class="item largerItem" id="Marsh_Badge">
-				<img class="item largerItem" id="Volcano_Badge">
-				<img class="item largerItem" id="Earth_Badge">
-				<img class="item largerItem" id="HM05_Flash">
-				<img class="item largerItem" id="HM01_Cut">
-				<img class="item largerItem" id="HM02_Fly">
-				<img class="item largerItem" id="HM04_Strength">
-				<img class="item largerItem" id="HM03_Surf">
-				<img class="notItem largerItem" >
-				<img class="notItem largerItem" >
-				<img class="notItem largerItem" >
+				<img class="item" id="Boulder_Badge">
+				<img class="item" id="Cascade_Badge">
+				<img class="item" id="Thunder_Badge">
+				<img class="item" id="Rainbow_Badge">
+				<img class="item" id="Soul_Badge">
+				<img class="item" id="Marsh_Badge">
+				<img class="item" id="Volcano_Badge">
+				<img class="item" id="Earth_Badge">
+				<img class="item" id="HM05_Flash">
+				<img class="item" id="HM01_Cut">
+				<img class="item" id="HM02_Fly">
+				<img class="item" id="HM04_Strength">
+				<img class="item" id="HM03_Surf">
+				<img class="notItem" >
+				<img class="notItem" >
+				<img class="notItem" >
+				<img class="item" id="Oaks_Parcel">
+				<img class="item" id="Pokedex">
+				<img class="item" id="Dome_Fossil">
+				<img class="item" id="Helix_Fossil">
+				<img class="item" id="Old_Amber">
+				<img class="item" id="SS_Ticket">
+				<img class="item" id="Bike_Voucher">
+				<img class="item" id="Bicycle">
+				<img class="item" id="Item_Finder">
+				<img class="item" id="Tea">
+				<img class="item" id="Lift_Key">
+				<img class="item" id="Silph_Scope">
+				<img class="item" id="Poke_Flute">
+				<img class="item" id="Card_Key">
+				<img class="item" id="Gold_Teeth">
+				<img class="item" id="Secret_Key">
 			</div>
 			<div id="itemHoverDesc">
 				&nbsp
@@ -372,6 +389,7 @@
 	<script>
 		addOnClick();
 		parseSettings();
+		hideToMatch(HIDDEN_ITEMS, "Hidden_Item_");
 		updateLocations();
 		updateGroups();
 		countchecks();
