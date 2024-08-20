@@ -256,16 +256,54 @@ function can_fuchsia() {
 		}
 	}
 }
+function can_fuchsiaHidden() {
+	const fuchsiaable = can_fuchsia();
+	if (fuchsiaable === "logical") {
+		return hidden_logic();
+	}
+	return fuchsiaable;
+}
 function can_cinnabar() {
 	if (can_surf()) {
 		return "logical";
 	}
 }
+function can_fossils() {
+	if (has("Dome_Fossil") && has("Helix_Fossil") && has("Old_Amber")) {
+		return can_cinnabar();
+	}
+}
 // Route Logic
 // 1 - logical
 // 2 - can_pewter()
-// 3 - can_cerulean()
-// 4 - can_cerulean()
+// 3 - 
+function can_route3() {
+	// From Pallet-Viridian-Pewter
+	if (can_route3_from_pewter()) {
+		if (can_cut()) {
+			return "logical";
+		}
+		if (has("EVENT_RETURN_PARCEL")) {
+			return "logical";
+		}
+	}
+	// From Pallet-Viridian-Vermilion-Cerulean
+	if (can_cut() && can_surf()) {
+		return "logical";
+	}
+	// From Pallet-Cinibar-Fuchsia
+	if (can_fuchsia_from_seafoam()) {
+		//-Vermilion-Cerulean
+		if (has("Poke_Flute")) {
+			return "logical";
+		}
+		//-Lavender-Saffron-Cerulean
+		if (has("Tea")) {
+			return "logical";
+		}
+	}
+}
+// 4 - can_route3()
 // 5 - can_vermilion()
 // 6 - can_vermilion()
 // 7 - can_celadon()
@@ -282,6 +320,13 @@ function can_route9() {
 		return "possible";
 	}
 }
+function can_route9Hidden() {
+	const route9able = can_route9();
+	if (route9able === "logical") {
+		return hidden_logic();
+	}
+	return route9able;
+}
 // 10 North - can_route9()
 // 10 South - can_lavender()
 // 11 - can_vermillion()
@@ -291,26 +336,16 @@ function can_route9() {
 // 14 - can_fuchsia()
 // 15 - can_fuchsia()
 // 16 East - can_celadon()
-// 16 West 
-function can_route16West() {
-	if (has("Bicicle")) {
-		return can_fuchsia();
-	}
-}
+// 16 West - can_fuchsia()
 // 17 - can_route16West()
 // 18 West - can_route16West()
 // 18 East - can_fuchsia()
-// 19
-function can_route19() {
-	if (can_surf()) {
-		return can_fuchsia();
-	}
-}
+// 19 - Barren
 // 20 East - can_route19()
 // 20 West - can_cinnabar()
 // 21 - can_cinnabar()
 // 22 - logical
-// 23 South
+// 23 
 function can_route23South() {
 	// TODO: Settings?
 	if (count_badges() >= 7) {
@@ -323,13 +358,17 @@ function can_victoryRoad() {
 		return "logical";
 	}
 }
-function can_e4() {
-	// TODO: settings
-	if (can_victoryRoad() && can_strength() && count_badges() >= 8) {
+function can_vitoryRoadComplete() {
+	if (can_victoryRoad() && can_strength()) {
 		return "logical";
 	}
 }
-// 23 North - can_e4()
+function can_e4() {
+	// TODO: settings
+	if (can_vitoryRoadComplete() && count_badges() >= 8) {
+		return "logical";
+	}
+}
 // 24 - can_cerulean()
 // 25 - can_cerulean()
 
@@ -524,11 +563,7 @@ const locationLogic = {
 		return can_lavender();
 	},
 	"Hidden_Item_Pokemon_Tower_5F": function() {
-		const lavenderable = can_lavender();
-		if (lavenderable === "logical") {
-			return hidden_logic();
-		}
-		return lavenderable;
+		return can_celadonHidden();
 	},
 	"Missable_Pokemon_Tower_5F_Item": function() {
 		return can_lavender();
@@ -822,11 +857,7 @@ const locationLogic = {
 		return can_fuchsia();
 	},
 	"Hidden_Item_Safari_Zone_West": function() {
-		const fuchsiaable = can_fuchsia();
-		if (fuchsiaable === "logical") {
-			return hidden_logic();
-		}
-		return fuchsiaable;
+		return can_fuchsiaHidden();
 	},
 	"Event_Safari_Zone_Secret_House": function() {
 		return can_fuchsia();
@@ -834,6 +865,11 @@ const locationLogic = {
 	// Cinnabar
 	"Event_Lab_Scientist": function() {
 		return can_cinnabar();
+	},
+	"Npc_Fossil_B": function() {
+		if (has("EVENT_FOSSIL_A")) {
+			return can_fossils();
+		}
 	},
 	// Cinnabar Gym
 	"Badge_Cinnabar_Gym": function() {
@@ -897,8 +933,347 @@ const locationLogic = {
 	// Routes
 	// ////////////////////
 	// 1
+	"Event_Free_Sample": function() {
+		return "logical";
+	},
+	// 2
+	"Event_Route_2_Oaks_Aide": function() {
+		if (can_cut() && has("Pokedex")) {
+			return "logical";
+		}
+	},
+	"Missable_Route_2_Item_1": function() {
+		return can_cut();
+	},
+	"Missable_Route_2_Item_2": function() {
+		return can_cut();
+	},
+	// Viridian Forest
+	"Hidden_Item_Viridian_Forest_2": function() {
+		if (can_pewter()) {
+			return hidden_logic();
+		}
+	},
+	"Missable_Viridian_Forest_Item_3": function() {
+		return can_pewter();
+	},
+	"Missable_Viridian_Forest_Item_1": function() {
+		return can_pewter();
+	},
+	"Missable_Viridian_Forest_Item_2": function() {
+		return can_pewter();
+	},
+	"Hidden_Item_Viridian_Forest_1": function() {
+		if (can_pewter()) {
+			return hidden_logic();
+		}
+	},
+	// 4
+	// Mt. Moon
+	"Missable_Mt_Moon_1F_Item_1": function() {
+		return can_route3();
+	},
+	"Missable_Mt_Moon_1F_Item_2": function() {
+		return can_route3();
+	},
+	"Missable_Mt_Moon_B2F_Item_1": function() {
+		return can_route3();
+	},
+	"Missable_Mt_Moon_1F_Item_3": function() {
+		return can_route3();
+	},
+	"Missable_Mt_Moon_1F_Item_4": function() {
+		return can_route3();
+	},
+	"Missable_Mt_Moon_1F_Item_5": function() {
+		return can_route3();
+	},
+	"Missable_Mt_Moon_B2F_Item_2": function() {
+		return can_route3();
+	},
+	"Hidden_Item_MtMoonB2F_2": function() {
+		if (can_route3()) {
+			return hidden_logic();
+		}
+	},
+	"Missable_Mt_Moon_1F_Item_6": function() {
+		return can_route3();
+	},
+	"Hidden_Item_MtMoonB2F_1": function() {
+		if (can_route3()) {
+			return hidden_logic();
+		}
+	},
+	"Npc_Fossil_A": function() {
+		if (can_route3()) {
+			if (can_fossils()) {
+				return "logical";
+			}
+			return "possible";
+		}
+	},
+	"EVENT_FOSSIL_A": function() {
+		if (can_route3()) {
+			if (can_fossils()) {
+				return "logical";
+			}
+			return "possible";
+		}
+	},
+	"Missable_Route_4_Item": function() {
+		return can_route3();
+	},
+	"Hidden_Item_Route_4": function() {
+		if (can_route3()) {
+			return hidden_logic();
+		}
+	},
+	// 5
+	"Hidden_Item_Underground_Path_NS_1": function() {
+		if (can_vermilion()) {
+			return hidden_logic();
+		}
+	},
+	"Hidden_Item_Underground_Path_NS_2": function() {
+		if (can_vermilion()) {
+			return hidden_logic();
+		}
+	},
+	// 8
+	"Hidden_Item_Underground_Path_WE_2": function() {
+		return can_celadonHidden();
+	},
+	"Hidden_Item_Underground_Path_WE_1": function() {
+		return can_celadonHidden();
+	},
+	// 9
+	"Missable_Route_9_Item": function() {
+		return can_route9();
+	},
+	"Hidden_Item_Route_9": function() {
+		return can_route9Hidden();
+	},
+	// 10
+	// Power Plant
+	"Missable_Power_Plant_Item_1": function() {
+		if (can_surf()) {
+			return can_route9();
+		}
+	},
+	"Hidden_Item_Power_Plant_1": function() {
+		if (can_surf()) {
+			return can_route9Hidden();
+		}
+	},
+	"Missable_Power_Plant_Item_5": function() {
+		if (can_surf()) {
+			return can_route9();
+		}
+	},
+	"Missable_Power_Plant_Item_4": function() {
+		if (can_surf()) {
+			return can_route9();
+		}
+	},
+	"Missable_Power_Plant_Item_3": function() {
+		if (can_surf()) {
+			return can_route9();
+		}
+	},
+	"Missable_Power_Plant_Item_2": function() {
+		if (can_surf()) {
+			return can_route9();
+		}
+	},
+	"Hidden_Item_Power_Plant_2": function() {
+		if (can_surf()) {
+			return can_route9Hidden();
+		}
+	},
+	"Hidden_Item_Route_10_1": function() {
+		return can_route9Hidden();
+	},
+	"Hidden_Item_Route_10_2": function() {
+		return can_celadonHidden();
+	},
+	// 11
+	"Event_Rt11_Oaks_Aide": function() {
+		if (can_vermilion() && has("Pokedex")) {
+			return "logical";
+		}
+	},
+	"Hidden_Item_Route_11": function() {
+		if (can_vermilion()) {
+			return hidden_logic();
+		}
+	},
+	// 12
+	"Rod_Route12_Fishing_Brother": function() {
+		return can_fuchsia();
+	},
+	"Event_Mourning_Girl": function() {
+		return can_lavender();
+	},
+	"Missable_Route_12_Item_1": function() {
+		if (can_surf()) {
+			return can_lavender();
+		}
+	},
+	"Missable_Route_12_Item_2": function() {
+		if (can_cut()) {
+			return can_fuchsia();
+		}
+	},
+	"Hidden_Item_Route_12": function() {
+		if (can_vermilion()) {
+			return hidden_logic();
+		}
+	},
+	// 13
+	"Hidden_Item_Route_13_1": function() {
+		return can_fuchsiaHidden();
+	},
+	"Hidden_Item_Route_13_2": function() {
+		return can_fuchsiaHidden();
+	},
+	// 15
+	"Event_Rt_15_Oaks_Aide": function() {
+		if (has("Pokedex")) {
+			return can_fuchsia();
+		}
+	},
+	"Missable_Route_15_Item": function() {
+		return can_fuchsia();
+	},
+	// 16
+	"Event_Rt16_House_Woman": function() {
+		if (can_cut()) {
+			return can_celadon();
+		}
+	},
+	// 17
+	"Hidden_Item_Route_17_1": function() {
+		if (has("Bicycle")) {
+			return can_fuchsiaHidden();
+		}
+	},
+	"Hidden_Item_Route_17_2": function() {
+		if (has("Bicycle")) {
+			return can_fuchsiaHidden();
+		}
+	},
+	"Hidden_Item_Route_17_3": function() {
+		if (has("Bicycle")) {
+			return can_fuchsiaHidden();
+		}
+	},
+	"Hidden_Item_Route_17_4": function() {
+		if (has("Bicycle")) {
+			return can_fuchsiaHidden();
+		}
+	},
+	"Hidden_Item_Route_17_5": function() {
+		if (has("Bicycle")) {
+			return can_fuchsiaHidden();
+		}
+	},
+	// 20
+	// Seafoam Islands
+	"Hidden_Item_Seafoam_Islands_B2F": function() {
+		if (can_surf()) {
+			return hidden_logic();
+		}
+	},
+	"Hidden_Item_Seafoam_Islands_B3F": function() {
+		if (can_surf()) {
+			return hidden_logic();
+		}
+	},
+	"Hidden_Item_Seafoam_Islands_B4F": function() {
+		if (can_surf()) {
+			return hidden_logic();
+		}
+	},
+	// 23
+	// Victory Road
+	"Missable_Victory_Road_1F_Item_1": function() {
+		return can_vitoryRoadComplete();
+	},
+	"Missable_Victory_Road_1F_Item_2": function() {
+		return can_vitoryRoadComplete();
+	},
+	"Missable_Victory_Road_2F_Item_1": function() {
+		return can_vitoryRoadComplete();
+	},
+	"Missable_Victory_Road_2F_Item_2": function() {
+		return can_vitoryRoadComplete();
+	},
+	"Missable_Victory_Road_2F_Item_3": function() {
+		return can_vitoryRoadComplete();
+	},
+	"Missable_Victory_Road_3F_Item_1": function() {
+		return can_vitoryRoadComplete();
+	},
+	"Missable_Victory_Road_3F_Item_2": function() {
+		return can_vitoryRoadComplete();
+	},
+	"Hidden_Item_Victory_Road_2F_1": function() {
+		if (can_vitoryRoadComplete()) {
+			return hidden_logic();
+		}
+	},
+	"Missable_Victory_Road_2F_Item_4": function() {
+		return can_vitoryRoadComplete();
+	},
+	"Hidden_Item_Victory_Road_2F_2": function() {
+		return can_vitoryRoadComplete();
+	},
+	"Hidden_Item_Route_23_1": function() {
+		if (can_vitoryRoadComplete()) {
+			return hidden_logic();
+		}
+	},
+	"Hidden_Item_Route_23_2": function() {
+		if (can_vitoryRoadComplete()) {
+			return hidden_logic();
+		}
+	},
+	"Hidden_Item_Route_23_3": function() {
+		if (can_vitoryRoadComplete()) {
+			return hidden_logic();
+		}
+	},
+	// 24
+	"Event_Nugget_Bridge": function() {
+		return can_cerulean();
+	},
+	"Missable_Route_24_Item": function() {
+		return can_cerulean();
+	},
 	// 25
+	// Bill's House
 	"EVENT_RESCUE_BILL": function() {
 		return can_cerulean();
+	},
+	"Event_Bill": function() {
+		return can_cerulean();
+	},
+	"Missable_Route_25_Item": function() {
+		if (can_cerulean()) {
+			if (can_cut()) {
+				return "logical";
+			}
+			return "possible";
+		}
+	},
+	"Hidden_Item_Route_25_1": function() {
+		if (can_cerulean()) {
+			return hidden_logic();
+		}
+	},
+	"Hidden_Item_Route_25_2": function() {
+		if (can_cerulean()) {
+			return hidden_logic();
+		}
 	},
 }

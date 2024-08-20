@@ -150,11 +150,20 @@ function gotLocation(id) {
 	let eventName = idToEvent[id - offset];
 	if (eventName) {
 		let div = document.getElementById(eventName);
+
+		// Special exception for fossils. Get one early, one later.
+		if (eventName === "EVENT_FOSSIL_A") {
+			if (div.classList.contains("subchecked")) {
+				addClassName(document.getElementById("Npc_Fossil_B"), "subchecked");
+			}
+		}
+
 		if (div.classList.contains("sub")) {
 			addClassName(document.getElementById(eventName), "subchecked");
 		}
 		else {
 			addClassName(document.getElementById(eventName), "locationchecked");
 		}
+
 	}
 }
