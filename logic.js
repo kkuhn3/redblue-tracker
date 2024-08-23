@@ -1340,7 +1340,7 @@ const locationLogic = {
 			return hidden_logic();
 		}
 	},
-	"EVENT_champion": function() {
+	"EVENT_CHAMPION": function() {
 		return can_vitoryRoadComplete();
 	}
 }
