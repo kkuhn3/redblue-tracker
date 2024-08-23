@@ -670,46 +670,74 @@ const locationLogic = {
 	},
 	// Celadon Game Corner
 	"Event_Game_Corner_Gift_A": function() {
-		return can_celadon();
+		if (has("Coin_Case")) {
+			return can_celadon();
+		}
 	},
 	"Event_Game_Corner_Gift_C": function() {
-		return can_celadon();
+		if (has("Coin_Case")) {
+			return can_celadon();
+		}
 	},
 	"Event_Game_Corner_Gift_B": function() {
-		return can_celadon();
+		if (has("Coin_Case")) {
+			return can_celadon();
+		}
 	},
 	"Hidden_Item_Game_Corner_1": function() {
-		return can_celadonHidden();
+		if (has("Coin_Case")) {
+			return can_celadonHidden();
+		}
 	},
 	"Hidden_Item_Game_Corner_2": function() {
-		return can_celadonHidden();
+		if (has("Coin_Case")) {
+			return can_celadonHidden();
+		}
 	},
 	"Hidden_Item_Game_Corner_3": function() {
-		return can_celadonHidden();
+		if (has("Coin_Case")) {
+			return can_celadonHidden();
+		}
 	},
 	"Hidden_Item_Game_Corner_4": function() {
-		return can_celadonHidden();
+		if (has("Coin_Case")) {
+			return can_celadonHidden();
+		}
 	},
 	"Hidden_Item_Game_Corner_5": function() {
-		return can_celadonHidden();
+		if (has("Coin_Case")) {
+			return can_celadonHidden();
+		}
 	},
 	"Hidden_Item_Game_Corner_6": function() {
-		return can_celadonHidden();
+		if (has("Coin_Case")) {
+			return can_celadonHidden();
+		}
 	},
 	"Hidden_Item_Game_Corner_7": function() {
-		return can_celadonHidden();
+		if (has("Coin_Case")) {
+			return can_celadonHidden();
+		}
 	},
 	"Hidden_Item_Game_Corner_8": function() {
-		return can_celadonHidden();
+		if (has("Coin_Case")) {
+			return can_celadonHidden();
+		}
 	},
 	"Hidden_Item_Game_Corner_9": function() {
-		return can_celadonHidden();
+		if (has("Coin_Case")) {
+			return can_celadonHidden();
+		}
 	},
 	"Hidden_Item_Game_Corner_10": function() {
-		return can_celadonHidden();
+		if (has("Coin_Case")) {
+			return can_celadonHidden();
+		}
 	},
 	"Hidden_Item_Game_Corner_11": function() {
-		return can_celadonHidden();
+		if (has("Coin_Case")) {
+			return can_celadonHidden();
+		}
 	},
 	// Rocket Hideout
 	"Hidden_Item_Rocket_Hideout_B1F": function() {
@@ -1207,7 +1235,9 @@ const locationLogic = {
 		}
 	},
 	"Missable_Route_15_Item": function() {
-		return can_fuchsia();
+		if (can_cut()) {
+			return can_fuchsia();
+		}
 	},
 	// 16
 	"Event_Rt16_House_Woman": function() {

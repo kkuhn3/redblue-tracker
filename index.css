@@ -52,6 +52,10 @@ body {
 	background-repeat: no-repeat;
     background-position: center;
 }
+.smallerItem {
+	width: 2.22222222222vw;
+	height: 2.22222222222vw;
+}
 .itemchecked {
 	filter: grayscale(0%);
 }
