@@ -9,6 +9,28 @@ function count_badges() {
 	}
 	return count;
 }
+function count_gyms() {
+	let count = 0;
+	const badges = ["EVENT_DEFEAT_GIOVANNI", "EVENT_DEFEAT_BROCK", "EVENT_DEFEAT_MISTY", "EVENT_DEFEAT_SURGE", "EVENT_DEFEAT_ERIKA", "EVENT_DEFEAT_SABRINA", "EVENT_DEFEAT_KOGA", "EVENT_DEFEAT_BLAINE"];
+	for (const badge of badges) {
+		const badgeDiv = document.getElementById(badge);
+		if (badgeDiv.classList.contains("subchecked")) {
+			count = count + 1;
+		}
+	}
+	return count;
+}
+function count_fossils() {
+	let count = 0;
+	const badges = ["Dome_Fossil", "Helix_Fossil", "Old_Amber"];
+	for (const badge of badges) {
+		const badgeDiv = document.getElementById(badge);
+		if (badgeDiv.classList.contains("itemchecked")) {
+			count = count + 1;
+		}
+	}
+	return count;
+}
 
 function has(item) {
 	const itemdiv = document.getElementById(item);
@@ -57,8 +79,22 @@ function can_fuchsia_from_seafoam() {
 	return can_surf() && can_strength();
 }
 function can_route3_from_pewter() {
-	// TODO - settings?
-	return has("EVENT_DEFEAT_BROCK");
+	const r3id = parseInt(ROUTE_3_CONDITION.classList[1].substring(1), 10);
+	if (r3id === 0) {
+		return true;
+	}
+	else if (r3id === 1) {
+		return has("EVENT_DEFEAT_BROCK");
+	}
+	else if (r3id === 2) {
+		return count_gyms() > 0;
+	}
+	else if (r3id === 3) {
+		return has("Boulder_Badge");
+	}
+	else if (r3id === 4) {
+		return count_badges() > 0;
+	}
 }
 function can_plot_to_cerulean() {
 	return can_route3_from_pewter() && has("EVENT_RETURN_PARCEL");
@@ -71,8 +107,8 @@ function can_plot_to_vermilion() {
 // Pallet - logical
 // Viridian - logical
 function can_viridianGym() {
-	// TODO: Settings?
-	if (count_badges() >= 7) {
+	const badges = parseInt(VIRIDIAN_GYM_CONDITION.classList[1].substring(1), 10);
+	if (count_badges() >= badges) {
 		return "logical";
 	}
 }
@@ -118,8 +154,8 @@ function can_cerulean() {
 	}
 }
 function can_ceruleanCave() {
-	// TODO: Settings?
-	if (can_cerulean() && can_surf() && count_badges() >= 8) {
+	const badges = parseInt(CERULEAN_CAVE_CONDITION.classList[1].substring(1), 10);
+	if (can_cerulean() && can_surf() && count_badges() >= badges) {
 		return "logical";
 	}
 }
@@ -269,7 +305,8 @@ function can_cinnabar() {
 	}
 }
 function can_fossils() {
-	if (has("Dome_Fossil") && has("Helix_Fossil") && has("Old_Amber")) {
+	const fossils = parseInt(FOSSILS_CONDITION.classList[1].substring(1), 10);
+	if (count_fossils() >= fossils) {
 		return can_cinnabar();
 	}
 }
@@ -347,14 +384,14 @@ function can_route9Hidden() {
 // 22 - logical
 // 23 
 function can_route23South() {
-	// TODO: Settings?
-	if (count_badges() >= 7) {
+	const badges = parseInt(ROUTE_22_CONDITION.classList[1].substring(1), 10);
+	if (count_badges() >= badges) {
 		return "logical";
 	}
 }
 function can_victoryRoad() {
-	// TODO: settings
-	if (can_route23South() && can_surf() && count_badges() >= 7) {
+	const badges = parseInt(VICTORY_ROAD_CONDITION.classList[1].substring(1), 10);
+	if (can_route23South() && can_surf() && count_badges() >= badges) {
 		return "logical";
 	}
 }
@@ -364,8 +401,8 @@ function can_vitoryRoadComplete() {
 	}
 }
 function can_e4() {
-	// TODO: settings
-	if (can_vitoryRoadComplete() && count_badges() >= 8) {
+	const badges = parseInt(ELITE_4_CONDITION.classList[1].substring(1), 10);
+	if (can_vitoryRoadComplete() && count_badges() >= badges) {
 		return "logical";
 	}
 }
@@ -407,6 +444,9 @@ const locationLogic = {
 	"Missable_Viridian_Gym_Item": function() {
 		return can_viridianGym();
 	},
+	"EVENT_DEFEAT_GIOVANNI": function() {
+		return can_viridianGym();
+	},
 	"Badge_Viridian_Gym": function() {
 		return can_viridianGym();
 	},
@@ -439,6 +479,9 @@ const locationLogic = {
 		}
 	},
 	// Cerulean Gym
+	"EVENT_DEFEAT_MISTY": function() {
+		return can_cerulean();
+	},
 	"Badge_Cerulean_Gym": function() {
 		return can_cerulean();
 	},
@@ -496,6 +539,11 @@ const locationLogic = {
 		return can_vermilion();
 	},
 	// Vermilion Gym
+	"EVENT_DEFEAT_SURGE": function() {
+		if (can_vermilion() && (can_surf() || can_cut())) {
+			return "logical";
+		}
+	},
 	"Badge_Vermilion_Gym": function() {
 		if (can_vermilion() && (can_surf() || can_cut())) {
 			return "logical";
@@ -605,6 +653,11 @@ const locationLogic = {
 		return can_celadon();
 	},
 	// Celadon Gym
+	"EVENT_DEFEAT_ERIKA": function() {
+		if (can_cut()) {
+			return can_celadon();
+		}
+	},
 	"Badge_Celadon_Gym": function() {
 		if (can_cut()) {
 			return can_celadon();
@@ -792,6 +845,9 @@ const locationLogic = {
 		return can_saffron();
 	},
 	// Saffron Gym
+	"EVENT_DEFEAT_SABRINA": function() {
+		return can_saffronGym();
+	},
 	"Badge_Saffron_Gym": function() {
 		return can_saffronGym();
 	},
@@ -814,6 +870,9 @@ const locationLogic = {
 		}
 	},
 	// Fuchsia Gym
+	"EVENT_DEFEAT_KOGA": function() {
+		return can_fuchsia();
+	},
 	"Badge_Fuchsia_Gym": function() {
 		return can_fuchsia();
 	},
@@ -872,6 +931,11 @@ const locationLogic = {
 		}
 	},
 	// Cinnabar Gym
+	"EVENT_DEFEAT_BLAINE": function() {
+		if (can_cinnabar() && has("Secret_Key")) {
+			return "logical";
+		}
+	},
 	"Badge_Cinnabar_Gym": function() {
 		if (can_cinnabar() && has("Secret_Key")) {
 			return "logical";
@@ -1229,17 +1293,17 @@ const locationLogic = {
 		return can_vitoryRoadComplete();
 	},
 	"Hidden_Item_Route_23_1": function() {
-		if (can_vitoryRoadComplete()) {
+		if (can_route23South() && can_surf()) {
 			return hidden_logic();
 		}
 	},
 	"Hidden_Item_Route_23_2": function() {
-		if (can_vitoryRoadComplete()) {
+		if (can_route23South() && can_surf()) {
 			return hidden_logic();
 		}
 	},
 	"Hidden_Item_Route_23_3": function() {
-		if (can_vitoryRoadComplete()) {
+		if (can_route23South() && can_surf()) {
 			return hidden_logic();
 		}
 	},
@@ -1276,4 +1340,7 @@ const locationLogic = {
 			return hidden_logic();
 		}
 	},
+	"EVENT_champion": function() {
+		return can_vitoryRoadComplete();
+	}
 }

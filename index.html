@@ -12,9 +12,13 @@
 		<div id="leftCol">
 			<div id="settings">
 				<img class="setting _1" id="HIDDEN_ITEMS" onclick="settingOnClick(this, 'Hidden_Item_')">
-				<div class="setting notImageImage" id="CHECK_CHECKED">0</div>
-				<div class="setting notImageImage" id="CHECK_LOGICAL">50</div>
-				<div class="setting notImageImage" id="CHECK_TOTAL">300</div>
+				<img class="setting _1" id="ROUTE_3_CONDITION" onclick="settingIterateOnClick(this, 4)">
+				<img class="setting _3" id="FOSSILS_CONDITION" onclick="settingIterateOnClick(this, 3)">
+				<img class="setting _7" id="VIRIDIAN_GYM_CONDITION" onclick="settingIterateOnClick(this, 8)">
+				<img class="setting _7" id="ROUTE_22_CONDITION" onclick="settingIterateOnClick(this, 8)">
+				<img class="setting _8" id="VICTORY_ROAD_CONDITION" onclick="settingIterateOnClick(this, 8)">
+				<img class="setting _8" id="ELITE_4_CONDITION" onclick="settingIterateOnClick(this, 8)">
+				<img class="setting _8" id="CERULEAN_CAVE_CONDITION" onclick="settingIterateOnClick(this, 8)">
 			</div>
 			<div id="items">
 				<img class="item" id="Boulder_Badge">
@@ -30,9 +34,9 @@
 				<img class="item" id="HM02_Fly">
 				<img class="item" id="HM04_Strength">
 				<img class="item" id="HM03_Surf">
-				<img class="notItem" >
-				<img class="notItem" >
-				<img class="notItem" >
+				<div class="setting notImageImage" id="CHECK_CHECKED">0</div>
+				<div class="setting notImageImage" id="CHECK_LOGICAL">50</div>
+				<div class="setting notImageImage" id="CHECK_TOTAL">300</div>
 				<img class="item" id="Oaks_Parcel">
 				<img class="item" id="Pokedex">
 				<img class="item" id="Dome_Fossil">
@@ -76,6 +80,7 @@
 			<div class="location" id="Event_Pokemart_Quest"></div>
 			<div class="group" id="viridian_gym">
 				<div class="sub" id="Missable_Viridian_Gym_Item"></div>
+				<div class="sub" id="EVENT_DEFEAT_GIOVANNI"></div>
 				<div class="sub" id="Badge_Viridian_Gym"></div>
 				<div class="sub" id="Event_Viridian_Gym"></div>
 			</div>
@@ -90,6 +95,7 @@
 			<!--Cerulean City-->
 			<div class="location" id="Event_Bicycle_Shop"></div>
 			<div class="group" id="cerulean_gym">
+				<div class="sub" id="EVENT_DEFEAT_MISTY"></div>
 				<div class="sub" id="Badge_Cerulean_Gym"></div>
 				<div class="sub" id="Event_Cerulean_Gym"></div>
 			</div>
@@ -111,6 +117,7 @@
 			<div class="location" id="Rod_Vermilion_City_Fishing_Guru"></div>
 			<div class="location" id="Event_Pokemon_Fan_Club"></div>
 			<div class="group" id="vermillion_gym">
+				<div class="sub" id="EVENT_DEFEAT_SURGE"></div>
 				<div class="sub" id="Badge_Vermilion_Gym"></div>
 				<div class="sub" id="Event_Vermillion_Gym"></div>
 			</div>
@@ -150,6 +157,7 @@
 			</div>
 			<div class="location" id="Event_Gambling_Addict"></div>
 			<div class="group" id="celadon_gym">
+				<div class="sub" id="EVENT_DEFEAT_ERIKA"></div>
 				<div class="sub" id="Badge_Celadon_Gym"></div>
 				<div class="sub" id="Event_Celadon_Gym"></div>
 			</div>
@@ -216,6 +224,7 @@
 			</div>
 			<div class="location" id="Event_Mr_Psychic"></div>
 			<div class="group" id="saffron_gym">
+				<div class="sub" id="EVENT_DEFEAT_SABRINA"></div>
 				<div class="sub" id="Badge_Saffron_Gym"></div>
 				<div class="sub" id="Event_Saffron_Gym"></div>
 			</div>
@@ -226,6 +235,7 @@
 				<div class="sub" id="Missable_Wardens_House_Item"></div>
 			</div>
 			<div class="group" id="fuchsia_gym">
+				<div class="sub" id="EVENT_DEFEAT_KOGA"></div>
 				<div class="sub" id="Badge_Fuchsia_Gym"></div>
 				<div class="sub" id="Event_Fuschia_Gym"></div>
 			</div>
@@ -250,6 +260,7 @@
 				<div class="sub" id="Npc_Fossil_B"></div>
 			</div>
 			<div class="group" id="cinnabar_gym">
+				<div class="sub" id="EVENT_DEFEAT_BLAINE"></div>
 				<div class="sub" id="Badge_Cinnabar_Gym"></div>
 				<div class="sub" id="Event_Cinnabar_Gym"></div>
 			</div>
@@ -390,6 +401,7 @@
 			<div class="location" id="Missable_Route_25_Item"></div>
 			<div class="location" id="Hidden_Item_Route_25_1"></div>
 			<div class="location" id="Hidden_Item_Route_25_2"></div>
+			<div class="location" id="EVENT_champion"></div>
 			<!-- The on hover blurb -->
 			<div id="idViewer"></div>
 		</div>

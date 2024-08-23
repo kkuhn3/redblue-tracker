@@ -179,6 +179,12 @@ function settingOnClick(div, prefix) {
 	updateGroups();
 	countchecks();
 }
+function settingIterateOnClick(div, count) {
+	settingIterate(div, count);
+	updateLocations();
+	updateGroups();
+	countchecks();
+}
 
 // Groups
 let currentGroup = "";
