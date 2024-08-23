@@ -36,7 +36,7 @@ function connect() {
 		socket.send(`[{
 			"cmd" : "Connect",
 			"password" : "",
-			"game" : "Pokemon Red/Blue",
+			"game" : "Pokemon Red and Blue",
 			"name" : "` + pname + `",
 			"tags" : ["Tracker"],
 			"version" : {
@@ -53,7 +53,7 @@ function connect() {
 	let slot = -1;
 	socket.addEventListener('message', function (event) {
 		const message = JSON.parse(event.data);
-		//console.log(message);
+		console.log(message);
 		let commands = [];
 		for (let command of message) {
 			commands.push(command.cmd);

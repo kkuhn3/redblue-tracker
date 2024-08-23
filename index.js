@@ -323,26 +323,29 @@ function countchecks() {
 //Parse URL inputs
 function parseSettings() {
 	const urlSearch = new URLSearchParams(window.location.search);
-	if (isIntLessThan(urlSearch.get("bt"), 1)) {
-		setSettingClass(BERRY_TREES, "_" + urlSearch.get("bt"));
-	}
 	if (isIntLessThan(urlSearch.get("hi"), 1)) {
 		setSettingClass(HIDDEN_ITEMS, "_" + urlSearch.get("hi"));
 	}
-	if (isIntLessThan(urlSearch.get("nr"), 1)) {
-		setSettingClass(NORMAN_REQ, "_" + urlSearch.get("nr"));
+	if (isIntLessThan(urlSearch.get("r3"), 1)) {
+		setSettingClass(ROUTE_3_CONDITION, "_" + urlSearch.get("r3"));
 	}
-	if (isIntLessThan(urlSearch.get("nc"), 7)) {
-		setSettingClass(NORMAN_COUNT, "_" + urlSearch.get("nc"));
+	if (isIntLessThan(urlSearch.get("fc"), 1)) {
+		setSettingClass(FOSSILS_CONDITION, "_" + urlSearch.get("fc"));
 	}
-	if (isIntLessThan(urlSearch.get("er"), 1)) {
-		setSettingClass(E4_REQ, "_" + urlSearch.get("er"));
+	if (isIntLessThan(urlSearch.get("vg"), 7)) {
+		setSettingClass(VIRIDIAN_GYM_CONDITION, "_" + urlSearch.get("vg"));
 	}
-	if (isIntLessThan(urlSearch.get("ec"), 8)) {
-		setSettingClass(E4_COUNT, "_" + urlSearch.get("ec"));
+	if (isIntLessThan(urlSearch.get("r22"), 1)) {
+		setSettingClass(ROUTE_22_CONDITION, "_" + urlSearch.get("r22"));
 	}
-	if (isIntLessThan(urlSearch.get("g"), 2)) {
-		setSettingClass(VICTORY_EVENT, "_" + urlSearch.get("g"));
+	if (isIntLessThan(urlSearch.get("vr"), 8)) {
+		setSettingClass(VICTORY_ROAD_CONDITION, "_" + urlSearch.get("vr"));
+	}
+	if (isIntLessThan(urlSearch.get("e4"), 2)) {
+		setSettingClass(ELITE_4_CONDITION, "_" + urlSearch.get("e4"));
+	}
+	if (isIntLessThan(urlSearch.get("cc"), 2)) {
+		setSettingClass(CERULEAN_CAVE_CONDITION, "_" + urlSearch.get("cc"));
 	}
 
 	if (urlSearch.get("name") && urlSearch.get("port")) {

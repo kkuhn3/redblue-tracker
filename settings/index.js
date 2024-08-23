@@ -4,13 +4,14 @@ function launch() {
 		url = url + "&name=" + PNAME.value;
 		url = url + "&port=" + APORT.value;
 	}
-	url = url + "&bt=" + BT.value;
 	url = url + "&hi=" + HI.value;
-	url = url + "&nr=" + NR.value;
-	url = url + "&nc=" + NC.value;
-	url = url + "&er=" + ER.value;
-	url = url + "&ec=" + EC.value;
-	url = url + "&g=" + G.value;
+	url = url + "&r3=" + R3.value;
+	url = url + "&fc=" + FC.value;
+	url = url + "&vg=" + VG.value;
+	url = url + "&r22=" + R22.value;
+	url = url + "&vr=" + VR.value;
+	url = url + "&e4=" + E4.value;
+	url = url + "&cc=" + CC.value;
 	url = url.replace("?&", "?");
 	window.open(url, "_self");
 }
