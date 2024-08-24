@@ -1371,6 +1371,6 @@ const locationLogic = {
 		}
 	},
 	"EVENT_CHAMPION": function() {
-		return can_vitoryRoadComplete();
+		return can_e4();
 	}
 }
