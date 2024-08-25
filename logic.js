@@ -107,9 +107,11 @@ function can_plot_to_vermilion() {
 // Pallet - logical
 // Viridian - logical
 function can_viridianGym() {
-	const badges = parseInt(VIRIDIAN_GYM_CONDITION.classList[1].substring(1), 10);
-	if (count_badges() >= badges) {
-		return "logical";
+	if (can_pewter()) {
+		const badges = parseInt(VIRIDIAN_GYM_CONDITION.classList[1].substring(1), 10);
+		if (count_badges() >= badges) {
+			return "logical";
+		}
 	}
 }
 function can_pewter() {
