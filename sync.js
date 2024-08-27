@@ -60,20 +60,16 @@ function connect() {
 		}
 
 		// seems to be an initial connect response
-		if (commands.includes("Connected") && commands.includes("ReceivedItems")) {
+		if (commands.includes("Connected")) {
 			for (let command of message) {
 				if (command.cmd === "Connected") {
 					slot = command.slot;
-				}
-			}
-			// for each "ReceivedItems"
-			for (let command of message) {
-				if (command.cmd === "ReceivedItems") {
+					// for each "checked_location"
 					if (currentGroup) {
 						groupBreakDown.innerHTML = "";
 					}
-					for (let item of command.items) {
-						gotItem(item.item);
+					for (let location of command.checked_locations) {
+						gotLocation(location);
 					}
 					if (currentGroup) {
 						groupFocus(document.getElementById(currentGroup));
@@ -82,16 +78,13 @@ function connect() {
 					updateGroups();
 					countchecks();
 				}
-			}
-			// go through each check
-			for (let command of message) {
-				if (command.cmd === "Connected") {
-					// for each "checked_location"
+				// for each "ReceivedItems"
+				else if (command.cmd === "ReceivedItems") {
 					if (currentGroup) {
 						groupBreakDown.innerHTML = "";
 					}
-					for (let location of command.checked_locations) {
-						gotLocation(location);
+					for (let item of command.items) {
+						gotItem(item.item);
 					}
 					if (currentGroup) {
 						groupFocus(document.getElementById(currentGroup));
