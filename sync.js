@@ -1,30 +1,8 @@
 let aport = false;
 let pname = false;
 
-let idToString = {};
-let idToItem = {};
-let idToLocation = {};
-let idToEvent = {};
 // https://github.com/ArchipelagoMW/Archipelago/blob/main/worlds/pokemon_rb/locations.py
 const offset = 172000000;
-async function loadStaticContent() {
-	const res1 = await fetch('./static/idToString.json', {
-		method: 'GET'
-	});
-	idToString = await res1.json();
-	const res2 = await fetch('./static/idToItem.json', {
-		method: 'GET'
-	});
-	idToItem = await res2.json();
-	const res3 = await fetch('./static/idToLocation.json', {
-		method: 'GET'
-	});
-	idToLocation = await res3.json();
-	const res4 = await fetch('./static/idToEvent.json', {
-		method: 'GET'
-	});
-	idToEvent = await res4.json();
-}
 
 function connect() {
 	if (!aport || !pname) {
@@ -42,7 +20,7 @@ function connect() {
 			"version" : {
 				"major": 0,
 				"minor": 5,
-				"build": 0,
+				"build": 1,
 				"class": "Version"
 			},
 			"items_handling" : 7,

@@ -5,13 +5,15 @@
 	<link rel="stylesheet" href="locations.css">
 	<link rel="stylesheet" href="items.css">
 	<script src="static/locationType.js" type="text/javascript"></script>
+	<script src="static/archIds.js" type="text/javascript"></script>
+	<script src="static/idToString.js" type="text/javascript"></script>
 	<script src="index.js" type="text/javascript"></script>
 	<script src="logic.js" type="text/javascript"></script>
 	<script src="sync.js" type="text/javascript"></script>
 	<body>
 		<div id="leftCol">
 			<div id="settings">
-				<img class="setting _1" id="HIDDEN_ITEMS" onclick="settingOnClick(this, 'Hidden_Item_')">
+				<img class="setting _0" id="HIDDEN_ITEMS" onclick="settingOnClick(this, 'Hidden_Item_')">
 				<img class="setting _1" id="ROUTE_3_CONDITION" onclick="settingIterateOnClick(this, 4)">
 				<img class="setting _3" id="FOSSILS_CONDITION" onclick="settingIterateOnClick(this, 3)">
 				<img class="setting _7" id="VIRIDIAN_GYM_CONDITION" onclick="settingIterateOnClick(this, 8)">
@@ -414,9 +416,6 @@
 		updateLocations();
 		updateGroups();
 		countchecks();
-		(async() => {
-			await loadStaticContent();
-			connect();
-		})()
+		connect();
 	</script>
 <html>

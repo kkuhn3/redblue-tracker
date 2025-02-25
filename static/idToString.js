@@ -1,4 +1,4 @@
-{
+const idToString = {
 	"//Events": "Added locations that signify plot",
 	"EVENT_RETURN_PARCEL": "Event: Return Oak's Parcel",
 	"EVENT_DEFEAT_BROCK": "Event: Defeat Brock",
@@ -804,4 +804,4 @@
 	"Event_SKC9F": "Silph Co 9F - Nurse",
 	"Event_SKC10F": "Silph Co 10F - Hostage",
 	"Event_SKC11F": "Silph Co 11F - Secretary"
-}
+};
