@@ -326,25 +326,25 @@ function parseSettings() {
 	if (isIntLessThan(urlSearch.get("hi"), 1)) {
 		setSettingClass(HIDDEN_ITEMS, "_" + urlSearch.get("hi"));
 	}
-	if (isIntLessThan(urlSearch.get("r3"), 1)) {
+	if (isIntLessThan(urlSearch.get("r3"), 4)) {
 		setSettingClass(ROUTE_3_CONDITION, "_" + urlSearch.get("r3"));
 	}
-	if (isIntLessThan(urlSearch.get("fc"), 1)) {
+	if (isIntLessThan(urlSearch.get("fc"), 3)) {
 		setSettingClass(FOSSILS_CONDITION, "_" + urlSearch.get("fc"));
 	}
 	if (isIntLessThan(urlSearch.get("vg"), 7)) {
 		setSettingClass(VIRIDIAN_GYM_CONDITION, "_" + urlSearch.get("vg"));
 	}
-	if (isIntLessThan(urlSearch.get("r22"), 1)) {
+	if (isIntLessThan(urlSearch.get("r22"), 7)) {
 		setSettingClass(ROUTE_22_CONDITION, "_" + urlSearch.get("r22"));
 	}
 	if (isIntLessThan(urlSearch.get("vr"), 8)) {
 		setSettingClass(VICTORY_ROAD_CONDITION, "_" + urlSearch.get("vr"));
 	}
-	if (isIntLessThan(urlSearch.get("e4"), 2)) {
+	if (isIntLessThan(urlSearch.get("e4"), 8)) {
 		setSettingClass(ELITE_4_CONDITION, "_" + urlSearch.get("e4"));
 	}
-	if (isIntLessThan(urlSearch.get("cc"), 2)) {
+	if (isIntLessThan(urlSearch.get("cc"), 8)) {
 		setSettingClass(CERULEAN_CAVE_CONDITION, "_" + urlSearch.get("cc"));
 	}
 
