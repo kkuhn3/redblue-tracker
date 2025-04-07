@@ -1108,10 +1108,7 @@ const locationLogic = {
 	},
 	"EVENT_FOSSIL_A": function() {
 		if (can_route3()) {
-			if (can_fossils()) {
-				return "logical";
-			}
-			return "possible";
+			return "logical";
 		}
 	},
 	"Missable_Route_4_Item": function() {

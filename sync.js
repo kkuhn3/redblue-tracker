@@ -21,7 +21,7 @@ function connect() {
 			"tags" : ["Tracker"],
 			"version" : {
 				"major": 0,
-				"minor": 5,
+				"minor": 6,
 				"build": 1,
 				"class": "Version"
 			},
