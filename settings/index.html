@@ -31,25 +31,93 @@
 		Randomizer Settings
 	</div>
 	<div>
-		<label>Hidden Items</label>
-		<select id="HI">
-			<option value="" selected>Excluded</option>
-			<option value="1">Randomized</option>
+		<label>Elite Four Badges Condition</label>
+		<select id="elite_four_badges_condition">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="" selected>8</option>
+		</select>
+	</div>
+	<div>
+		<label>Victory Road Condition</label>
+		<select id="victory_road_condition">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="" selected>7</option>
+			<option value="8">8</option>
+		</select>
+	</div>
+	<div>
+		<label>Route 22 Gate Condition</label>
+		<select id="route_22_gate_condition">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="" selected>7</option>
+		</select>
+	</div>
+	<div>
+		<label>Viridian Gym Condition</label>
+		<select id="viridian_gym_condition">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="" selected>7</option>
+		</select>
+	</div>
+	<div>
+		<label>Cerulean Cave Badges Condition</label>
+		<select id="cerulean_cave_badges_condition">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="" selected>4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
 		</select>
 	</div>
 	<div>
 		<label>Route 3 Condition</label>
-		<select id="R3">
+		<select id="route_3_condition">
 			<option value="0">Open</option>
 			<option value="" selected>Defeat Brock</option>
-			<option value="2">Defeat any Gym Leader</option>
-			<option value="3">Obtain Boulder Badge</option>
-			<option value="4">Obtain any Badge</option>
+			<option value="2">Defeat Any Gym</option>
+			<option value="3">Boulder Badge</option>
+			<option value="4">Any Badge</option>
 		</select>
 	</div>
 	<div>
-		<label>Fossils for Second Fossil Check</label>
-		<select id="FC">
+		<label>Robbed House Officer</label>
+		<select id="robbed_house_officer">
+			<option value="0">Removed</option>
+			<option value="" selected>Vanilla</option>
+		</select>
+	</div>
+	<div>
+		<label>Second Fossil Check Condition</label>
+		<select id="second_fossil_check_condition">
 			<option value="0">0</option>
 			<option value="1">1</option>
 			<option value="2">2</option>
@@ -57,71 +125,116 @@
 		</select>
 	</div>
 	<div>
-		<label>Badges for Viridian Gym</label>
-		<select id="VG">
-			<option value="0">0</option>
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="" selected>7</option>
+		<label>Old Man</label>
+		<select id="old_man">
+			<option value="">Vanilla</option>
+			<option value="" selected>Early Parcel</option>
+			<option value="1">Open Viridian City</option>
 		</select>
 	</div>
 	<div>
-		<label>Badges for Route 22 Gate</label>
-		<select id="R22">
-			<option value="0">0</option>
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="" selected>7</option>
+		<label>Badges Needed for HM Moves</label>
+		<select id="badges_needed_for_hm_moves">
+			<option value="" selected>On</option>
+			<option value="1">Off</option>
+			<option value="" disabled>Extra</option>
+			<option value="" disabled>Extra Plus</option>
 		</select>
 	</div>
 	<div>
-		<label>Badges for Victory Road</label>
-		<select id="VR">
-			<option value="0">0</option>
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="" selected>8</option>
+		<label>Tea</label>
+		<select id="tea">
+			<option value="0">Vanilla</option>
+			<option value="" selected>Tea</option>
 		</select>
 	</div>
 	<div>
-		<label>Badges for Elite Four</label>
-		<select id="E4">
-			<option value="0">0</option>
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="" selected>8</option>
+		<label>Extra Key Items</label>
+		<select id="extra_key_items">
+			<option value="" selected>Vanilla</option>
+			<option value="1">Extra</option>
 		</select>
 	</div>
 	<div>
-		<label>Badges for Cerulean Cave</label>
-		<select id="CC">
-			<option value="0">0</option>
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="" selected>8</option>
+		<label>Split Card Key</label>
+		<select id="split_card_key">
+			<option value="" selected>Vanilla</option>
+			<option value="1">Split</option>
+			<option value="1">Progressive</option>
+		</select>
+	</div>
+	<div>
+		<label>Extra Strength Boulders</label>
+		<select id="extra_strength_boulders">
+			<option value="" selected>Vanilla</option>
+			<option value="1">Extra</option>
+		</select>
+	</div>
+	<div>
+		<label>Require Item Finder</label>
+		<select id="require_item_finder">
+			<option value="" selected>Vanilla</option>
+			<option value="1">Required</option>
+		</select>
+	</div>
+	<div>
+		<label>Randomize Hidden Items</label>
+		<select id="randomize_hidden_items">
+			<option value="0">On</option>
+			<option value="" selected>Off</option>
+			<option value="">Exclude</option>
+		</select>
+	</div>
+	<div>
+		<label>Prizesanity</label>
+		<select id="prizesanity">
+			<option value="" selected>False</option>
+			<option value="1">True</option>
+		</select>
+	</div>
+	<!--
+	<div>
+		<label>Randomize Pokedex</label>
+		<select id="randomize_pokedex">
+			<option value="0">Vanilla</option>
+			<option value="" selected>Randomize</option>
+			<option value="">Start With</option>
+		</select>
+	</div>
+	-->
+	<div>
+		<label>Require Pokedex</label>
+		<select id="require_pokedex">
+			<option value="0">False</option>
+			<option value="" selected>True</option>
+		</select>
+	</div>
+	<div>
+		<label>Stonesanity</label>
+		<select id="stonesanity">
+			<option value="" selected>False</option>
+			<option value="1">True</option>
+		</select>
+	</div>
+	<div>
+		<label>Dark Rock Tunnel Logic</label>
+		<select id="dark_rock_tunnel_logic">
+			<option value="0">No Flash</option>
+			<option value="" selected>Flash Required</option>
+		</select>
+	</div>
+	<div>
+		<label>Poke Doll Skip</label>
+		<select id="poke_doll_skip">
+			<option value="" selected>Patched</option>
+			<option value="1">In Logic</option>
+		</select>
+	</div>
+	<div>
+		<label>Bicycle Gate Skips</label>
+		<select id="bicycle_gate_skips">
+			<option value="" selected>Patched</option>
+			<option value="1">In Logic</option>
 		</select>
 	</div>
 

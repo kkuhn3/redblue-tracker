@@ -23,9 +23,11 @@ body {
 }
 /*Settings*/
 .setting {
-	width: 2.5vw;
-	height: 2.5vw;
+	width: calc(20vw/11);
+	height: calc(20vw/11);
 	background-size: contain;
+	background-repeat: no-repeat;
+    background-position: center;
 	float: left;
 	cursor: pointer;
 	background-color: #293541;
@@ -41,7 +43,9 @@ body {
 	color: silver;
 	font-size: 1.2vw;
 	text-align: center;
-	line-height: 2.5vw;
+	line-height: calc(20vw/8);
+	width: calc(20vw/8);
+	height: calc(20vw/8);
 	box-shadow: 0 1px 0 0 #d3dfeb inset, 1px 0 0 0 #d3dfeb inset, -1px 0 0 0 #d3dfeb inset, 0 -1px 0 0 #d3dfeb inset;
 }
 .setting.notImageImage:hover {
@@ -52,8 +56,8 @@ body {
 	float: left;
 }
 .item {
-	width: 2.5vw;
-	height: 2.5vw;
+	width: calc(20vw/8);
+	height: calc(20vw/8);
 	background-size: contain;
 	float: left;
 	filter: grayscale(100%);
@@ -69,8 +73,8 @@ body {
 	z-index: 100;
 }
 .smallerItem {
-	width: 2.22222222222vw;
-	height: 2.22222222222vw;
+	width: calc(20vw/15);
+	height: calc(20vw/15);
 }
 .itemchecked {
 	filter: grayscale(0%);
@@ -236,12 +240,6 @@ body {
 
 /*various aliases for display none*/
 .hidden {
-	display: none;
-}
-.hiddenhidden {
-	display: none;
-}
-.victoryhidden {
 	display: none;
 }
 

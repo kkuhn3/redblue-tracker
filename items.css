@@ -69,9 +69,6 @@
 #Item_Finder {
 	background-image: url(./images/items/Item_Finder.png);
 }
-#Tea {
-	background-image: url(./images/items/Tea.png);
-}
 #Coin_Case {
 	background-image: url(./images/items/Coin_Case.png);
 }
@@ -93,180 +90,303 @@
 #Secret_Key {
 	background-image: url(./images/items/Secret_Key.png);
 }
+/* Row 3, setting enabled items */
+#Tea {
+	background-image: url(./images/items/Tea.png);
+}
+#Hideout_Key {
+	background-image: url(./images/items/Hideout_Key.png);
+}
+#Safari_Pass {
+	background-image: url(./images/items/Safari_Pass.png);
+}
+#Plant_Key {
+	background-image: url(./images/items/Plant_Key.png);
+}
+#Mansion_Key {
+	background-image: url(./images/items/Mansion_Key.png);
+}
+#Card_Key_2F {
+	background-image: url(./images/items/Card_Key_2F.png);
+}
+#Card_Key_3F {
+	background-image: url(./images/items/Card_Key_3F.png);
+}
+#Card_Key_4F {
+	background-image: url(./images/items/Card_Key_4F.png);
+}
+#Card_Key_5F {
+	background-image: url(./images/items/Card_Key_5F.png);
+}
+#Card_Key_6F {
+	background-image: url(./images/items/Card_Key_6F.png);
+}
+#Card_Key_7F {
+	background-image: url(./images/items/Card_Key_7F.png);
+}
+#Card_Key_8F {
+	background-image: url(./images/items/Card_Key_8F.png);
+}
+#Card_Key_9F {
+	background-image: url(./images/items/Card_Key_9F.png);
+}
+#Card_Key_10F {
+	background-image: url(./images/items/Card_Key_10F.png);
+}
+#Card_Key_11F {
+	background-image: url(./images/items/Card_Key_11F.png);
+}
 
 /* Settings, not really items but similar enough */
-#HIDDEN_ITEMS._0 {
-	background-image: url(./images/settings/hidehidden.png);
-}
-#HIDDEN_ITEMS._1 {
-	background-image: url(./images/settings/showhidden.png);
-}
-
-#ROUTE_3_CONDITION._0 {
-	background-image: url(./images/settings/r3_0.png);
-}
-#ROUTE_3_CONDITION._1 {
-	background-image: url(./images/settings/r3_1.png);
-}
-#ROUTE_3_CONDITION._2 {
-	background-image: url(./images/settings/r3_2.png);
-}
-#ROUTE_3_CONDITION._3 {
-	background-image: url(./images/settings/r3_3.png);
-}
-#ROUTE_3_CONDITION._4 {
-	background-image: url(./images/settings/r3_4.png);
-}
-
-#FOSSILS_CONDITION._0 {
-	background-image: url(./images/settings/fossil_0.png);
-}
-#FOSSILS_CONDITION._1 {
-	background-image: url(./images/settings/fossil_1.png);
-}
-#FOSSILS_CONDITION._2 {
-	background-image: url(./images/settings/fossil_2.png);
-}
-#FOSSILS_CONDITION._3 {
-	background-image: url(./images/settings/fossil_3.png);
-}
-
-#VIRIDIAN_GYM_CONDITION._0 {
-	background-image: url(./images/settings/vg_0.png);
-}
-#VIRIDIAN_GYM_CONDITION._1 {
-	background-image: url(./images/settings/vg_1.png);
-}
-#VIRIDIAN_GYM_CONDITION._2 {
-	background-image: url(./images/settings/vg_2.png);
-}
-#VIRIDIAN_GYM_CONDITION._3 {
-	background-image: url(./images/settings/vg_3.png);
-}
-#VIRIDIAN_GYM_CONDITION._4 {
-	background-image: url(./images/settings/vg_4.png);
-}
-#VIRIDIAN_GYM_CONDITION._5 {
-	background-image: url(./images/settings/vg_5.png);
-}
-#VIRIDIAN_GYM_CONDITION._6 {
-	background-image: url(./images/settings/vg_6.png);
-}
-#VIRIDIAN_GYM_CONDITION._7 {
-	background-image: url(./images/settings/vg_7.png);
-}
-#VIRIDIAN_GYM_CONDITION._8 {
-	background-image: url(./images/settings/vg_8.png);
-}
-
-#ROUTE_22_CONDITION._0 {
-	background-image: url(./images/settings/r22_0.png);
-}
-#ROUTE_22_CONDITION._1 {
-	background-image: url(./images/settings/r22_1.png);
-}
-#ROUTE_22_CONDITION._2 {
-	background-image: url(./images/settings/r22_2.png);
-}
-#ROUTE_22_CONDITION._3 {
-	background-image: url(./images/settings/r22_3.png);
-}
-#ROUTE_22_CONDITION._4 {
-	background-image: url(./images/settings/r22_4.png);
-}
-#ROUTE_22_CONDITION._5 {
-	background-image: url(./images/settings/r22_5.png);
-}
-#ROUTE_22_CONDITION._6 {
-	background-image: url(./images/settings/r22_6.png);
-}
-#ROUTE_22_CONDITION._7 {
-	background-image: url(./images/settings/r22_7.png);
-}
-#ROUTE_22_CONDITION._8 {
-	background-image: url(./images/settings/r22_8.png);
-}
-
-#VICTORY_ROAD_CONDITION._0 {
-	background-image: url(./images/settings/vr_0.png);
-}
-#VICTORY_ROAD_CONDITION._1 {
-	background-image: url(./images/settings/vr_1.png);
-}
-#VICTORY_ROAD_CONDITION._2 {
-	background-image: url(./images/settings/vr_2.png);
-}
-#VICTORY_ROAD_CONDITION._3 {
-	background-image: url(./images/settings/vr_3.png);
-}
-#VICTORY_ROAD_CONDITION._4 {
-	background-image: url(./images/settings/vr_4.png);
-}
-#VICTORY_ROAD_CONDITION._5 {
-	background-image: url(./images/settings/vr_5.png);
-}
-#VICTORY_ROAD_CONDITION._6 {
-	background-image: url(./images/settings/vr_6.png);
-}
-#VICTORY_ROAD_CONDITION._7 {
-	background-image: url(./images/settings/vr_7.png);
-}
-#VICTORY_ROAD_CONDITION._8 {
-	background-image: url(./images/settings/vr_8.png);
-}
-
-#ELITE_4_CONDITION._0 {
+#elite_four_badges_condition._0 {
 	background-image: url(./images/settings/e4_0.png);
 }
-#ELITE_4_CONDITION._1 {
+#elite_four_badges_condition._1 {
 	background-image: url(./images/settings/e4_1.png);
 }
-#ELITE_4_CONDITION._2 {
+#elite_four_badges_condition._2 {
 	background-image: url(./images/settings/e4_2.png);
 }
-#ELITE_4_CONDITION._3 {
+#elite_four_badges_condition._3 {
 	background-image: url(./images/settings/e4_3.png);
 }
-#ELITE_4_CONDITION._4 {
+#elite_four_badges_condition._4 {
 	background-image: url(./images/settings/e4_4.png);
 }
-#ELITE_4_CONDITION._5 {
+#elite_four_badges_condition._5 {
 	background-image: url(./images/settings/e4_5.png);
 }
-#ELITE_4_CONDITION._6 {
+#elite_four_badges_condition._6 {
 	background-image: url(./images/settings/e4_6.png);
 }
-#ELITE_4_CONDITION._7 {
+#elite_four_badges_condition._7 {
 	background-image: url(./images/settings/e4_7.png);
 }
-#ELITE_4_CONDITION._8 {
+#elite_four_badges_condition._8 {
 	background-image: url(./images/settings/e4_8.png);
 }
-
-#CERULEAN_CAVE_CONDITION._0 {
+#victory_road_condition._0 {
+	background-image: url(./images/settings/vr_0.png);
+}
+#victory_road_condition._1 {
+	background-image: url(./images/settings/vr_1.png);
+}
+#victory_road_condition._2 {
+	background-image: url(./images/settings/vr_2.png);
+}
+#victory_road_condition._3 {
+	background-image: url(./images/settings/vr_3.png);
+}
+#victory_road_condition._4 {
+	background-image: url(./images/settings/vr_4.png);
+}
+#victory_road_condition._5 {
+	background-image: url(./images/settings/vr_5.png);
+}
+#victory_road_condition._6 {
+	background-image: url(./images/settings/vr_6.png);
+}
+#victory_road_condition._7 {
+	background-image: url(./images/settings/vr_7.png);
+}
+#victory_road_condition._8 {
+	background-image: url(./images/settings/vr_8.png);
+}
+#route_22_gate_condition._0 {
+	background-image: url(./images/settings/r22_0.png);
+}
+#route_22_gate_condition._1 {
+	background-image: url(./images/settings/r22_1.png);
+}
+#route_22_gate_condition._2 {
+	background-image: url(./images/settings/r22_2.png);
+}
+#route_22_gate_condition._3 {
+	background-image: url(./images/settings/r22_3.png);
+}
+#route_22_gate_condition._4 {
+	background-image: url(./images/settings/r22_4.png);
+}
+#route_22_gate_condition._5 {
+	background-image: url(./images/settings/r22_5.png);
+}
+#route_22_gate_condition._6 {
+	background-image: url(./images/settings/r22_6.png);
+}
+#route_22_gate_condition._7 {
+	background-image: url(./images/settings/r22_7.png);
+}
+#route_22_gate_condition._8 {
+	background-image: url(./images/settings/r22_8.png);
+}
+#viridian_gym_condition._0 {
+	background-image: url(./images/settings/vg_0.png);
+}
+#viridian_gym_condition._1 {
+	background-image: url(./images/settings/vg_1.png);
+}
+#viridian_gym_condition._2 {
+	background-image: url(./images/settings/vg_2.png);
+}
+#viridian_gym_condition._3 {
+	background-image: url(./images/settings/vg_3.png);
+}
+#viridian_gym_condition._4 {
+	background-image: url(./images/settings/vg_4.png);
+}
+#viridian_gym_condition._5 {
+	background-image: url(./images/settings/vg_5.png);
+}
+#viridian_gym_condition._6 {
+	background-image: url(./images/settings/vg_6.png);
+}
+#viridian_gym_condition._7 {
+	background-image: url(./images/settings/vg_7.png);
+}
+#viridian_gym_condition._8 {
+	background-image: url(./images/settings/vg_8.png);
+}
+#cerulean_cave_badges_condition._0 {
 	background-image: url(./images/settings/cc_0.png);
 }
-#CERULEAN_CAVE_CONDITION._1 {
+#cerulean_cave_badges_condition._1 {
 	background-image: url(./images/settings/cc_1.png);
 }
-#CERULEAN_CAVE_CONDITION._2 {
+#cerulean_cave_badges_condition._2 {
 	background-image: url(./images/settings/cc_2.png);
 }
-#CERULEAN_CAVE_CONDITION._3 {
+#cerulean_cave_badges_condition._3 {
 	background-image: url(./images/settings/cc_3.png);
 }
-#CERULEAN_CAVE_CONDITION._4 {
+#cerulean_cave_badges_condition._4 {
 	background-image: url(./images/settings/cc_4.png);
 }
-#CERULEAN_CAVE_CONDITION._5 {
+#cerulean_cave_badges_condition._5 {
 	background-image: url(./images/settings/cc_5.png);
 }
-#CERULEAN_CAVE_CONDITION._6 {
+#cerulean_cave_badges_condition._6 {
 	background-image: url(./images/settings/cc_6.png);
 }
-#CERULEAN_CAVE_CONDITION._7 {
+#cerulean_cave_badges_condition._7 {
 	background-image: url(./images/settings/cc_7.png);
 }
-#CERULEAN_CAVE_CONDITION._8 {
+#cerulean_cave_badges_condition._8 {
 	background-image: url(./images/settings/cc_8.png);
+}
+#route_3_condition._0 {
+	background-image: url(./images/settings/r3_0.png);
+}
+#route_3_condition._1 {
+	background-image: url(./images/settings/r3_1.png);
+}
+#route_3_condition._2 {
+	background-image: url(./images/settings/r3_2.png);
+}
+#route_3_condition._3 {
+	background-image: url(./images/settings/r3_3.png);
+}
+#route_3_condition._4 {
+	background-image: url(./images/settings/r3_4.png);
+}
+#robbed_house_officer._0 {
+	background-image: url(./images/settings/robbed_house_officer_0.png);
+}
+#robbed_house_officer._1 {
+	background-image: url(./images/settings/robbed_house_officer_1.png);
+}
+#second_fossil_check_condition._0 {
+	background-image: url(./images/settings/fossil_0.png);
+}
+#second_fossil_check_condition._1 {
+	background-image: url(./images/settings/fossil_1.png);
+}
+#second_fossil_check_condition._2 {
+	background-image: url(./images/settings/fossil_2.png);
+}
+#second_fossil_check_condition._3 {
+	background-image: url(./images/settings/fossil_3.png);
+}
+#old_man._0 {
+	background-image: url(./images/settings/old_man_0.png);
+}
+#old_man._1 {
+	background-image: url(./images/settings/old_man_1.png);
+}
+#badges_needed_for_hm_moves._0 {
+	background-image: url(./images/items/Boulder_Badge.png);
+}
+#badges_needed_for_hm_moves._1 {
+	background-image: url(./images/settings/badges_needed_for_hm_moves_1.png);
+}
+#tea._0 {
+	background-image: url(./images/settings/tea_0.png);
+}
+#tea._1 {
+	background-image: url(./images/items/Tea.png);
+}
+#extra_key_items._0 {
+	background-image: url(./images/settings/extra_key_items_0.png);
+}
+#extra_key_items._1 {
+	background-image: url(./images/settings/extra_key_items_1.png);
+}
+#split_card_key._0 {
+	background-image: url(./images/settings/split_card_key_0.png);
+}
+#split_card_key._1 {
+	background-image: url(./images/items/Card_Key_11F.png);
+}
+#extra_strength_boulders._0 {
+	background-image: url(./images/settings/extra_strength_boulders_0.png);
+}
+#extra_strength_boulders._1 {
+	background-image: url(./images/items/hm04.png);
+}
+#require_item_finder._0 {
+	background-image: url(./images/settings/randomize_hidden_items_1.png);
+}
+#require_item_finder._1 {
+	background-image: url(./images/items/Item_Finder.png);
+}
+#randomize_hidden_items._0 {
+	background-image: url(./images/items/Item_Finder.png);
+}
+#randomize_hidden_items._1 {
+	background-image: url(./images/settings/randomize_hidden_items_1.png);
+}
+#prizesanity._0 {
+	background-image: url(./images/settings/prizesanity_0.png);
+}
+#prizesanity._1 {
+	background-image: url(./images/items/Coin_Case.png);
+}
+#require_pokedex._0 {
+	background-image: url(./images/settings/require_pokedex_0.png);
+}
+#require_pokedex._1 {
+	background-image: url(./images/items/Pokedex.png);
+}
+#stonesanity._0 {
+	background-image: url(./images/settings/stonesanity_0.png);
+}
+#stonesanity._1 {
+	background-image: url(./images/settings/stonesanity_1.png);
+}
+#dark_rock_tunnel_logic._0 {
+	background-image: url(./images/settings/dark_rock_tunnel_logic_0.png);
+}
+#dark_rock_tunnel_logic._1 {
+	background-image: url(./images/items/hm05.png);
+}
+#poke_doll_skip._0 {
+	background-image: url(./images/settings/poke_doll_skip_0.png);
+}
+#poke_doll_skip._1 {
+	background-image: url(./images/settings/poke_doll_skip_1.png);
+}
+#bicycle_gate_skips._0 {
+	background-image: url(./images/items/Bicycle.png);
+}
+#bicycle_gate_skips._1 {
+	background-image: url(./images/settings/bicycle_gate_skips_1.png);
 }

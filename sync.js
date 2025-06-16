@@ -54,6 +54,7 @@ function connect() {
 					if (currentGroup) {
 						groupFocus(document.getElementById(currentGroup));
 					}
+					settingsFromSlotData(command.slot_data);
 					updateLocations();
 					updateGroups();
 					countchecks();
@@ -137,6 +138,34 @@ function gotLocation(id) {
 		else {
 			addClassName(document.getElementById(eventName), "locationchecked");
 		}
-
 	}
+}
+
+function settingsFromSlotData(slotData) {
+	for (const setting of document.getElementsByClassName("setting")) {
+		if (slotData[setting.id] != null) {
+			setSettingClass(setting, "_" + slotData[setting.id]);
+		}
+	}
+	// old_man
+	if (getSettingValue(old_man) === 1) {
+		setSettingClass(old_man, "_" + 0);
+	}
+	else if (getSettingValue(old_man) === 2) {
+		setSettingClass(old_man, "_" + 1);
+	}
+	// badges_needed_for_hm_moves
+	if (getSettingValue(badges_needed_for_hm_moves) === 2 || getSettingValue(badges_needed_for_hm_moves) === 3) {
+		setSettingClass(badges_needed_for_hm_moves, "_" + 0);
+	}
+	// split_card_key
+	if (getSettingValue(split_card_key) === 2) {
+		setSettingClass(split_card_key, "_" + 1);
+	}
+	// randomize_hidden_items
+	if (getSettingValue(randomize_hidden_items) === 2) {
+		setSettingClass(randomize_hidden_items, "_" + 1);
+	}
+
+	hideToMatch();
 }

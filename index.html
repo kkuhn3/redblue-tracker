@@ -13,14 +13,28 @@
 	<body>
 		<div id="leftCol">
 			<div id="settings">
-				<img class="setting _0" id="HIDDEN_ITEMS" onclick="settingOnClick(this, 'Hidden_Item_')">
-				<img class="setting _1" id="ROUTE_3_CONDITION" onclick="settingIterateOnClick(this, 4)">
-				<img class="setting _3" id="FOSSILS_CONDITION" onclick="settingIterateOnClick(this, 3)">
-				<img class="setting _7" id="VIRIDIAN_GYM_CONDITION" onclick="settingIterateOnClick(this, 8)">
-				<img class="setting _7" id="ROUTE_22_CONDITION" onclick="settingIterateOnClick(this, 8)">
-				<img class="setting _8" id="VICTORY_ROAD_CONDITION" onclick="settingIterateOnClick(this, 8)">
-				<img class="setting _8" id="ELITE_4_CONDITION" onclick="settingIterateOnClick(this, 8)">
-				<img class="setting _8" id="CERULEAN_CAVE_CONDITION" onclick="settingIterateOnClick(this, 8)">
+				<img class="setting _8" id="elite_four_badges_condition" onclick="settingLogic(this, 8)">
+				<img class="setting _8" id="victory_road_condition" onclick="settingLogic(this, 8)">
+				<img class="setting _7" id="route_22_gate_condition" onclick="settingLogic(this, 7)">
+				<img class="setting _7" id="viridian_gym_condition" onclick="settingLogic(this, 7)">
+				<img class="setting _4" id="cerulean_cave_badges_condition" onclick="settingLogic(this, 8)">
+				<img class="setting _1" id="route_3_condition" onclick="settingLogic(this, 4)">
+				<img class="setting _1" id="robbed_house_officer" onclick="settingLogic(this, 1)">
+				<img class="setting _3" id="second_fossil_check_condition" onclick="settingLogic(this, 3)">
+				<img class="setting _0" id="old_man" onclick="settingLogic(this, 1)">
+				<img class="setting _0" id="badges_needed_for_hm_moves" onclick="settingLogic(this, 1)">
+				<img class="setting _1" id="tea" onclick="settingLogicHide(this, 1)">
+				<img class="setting _0" id="extra_key_items" onclick="settingLogicHide(this, 1)">
+				<img class="setting _0" id="split_card_key" onclick="settingLogicHide(this, 1)">
+				<img class="setting _0" id="extra_strength_boulders" onclick="settingLogic(this, 1)">
+				<img class="setting _0" id="require_item_finder" onclick="settingLogic(this, 1)">
+				<img class="setting _1" id="randomize_hidden_items" onclick="settingHide(this, 1)">
+				<img class="setting _0" id="prizesanity" onclick="settingHide(this, 1)">
+				<img class="setting _1" id="require_pokedex" onclick="settingLogic(this, 1)">
+				<img class="setting _0" id="stonesanity" onclick="settingHide(this, 1)">
+				<img class="setting _1" id="dark_rock_tunnel_logic" onclick="settingLogic(this, 1)">
+				<img class="setting _0" id="poke_doll_skip" onclick="settingLogic(this, 1)">
+				<img class="setting _0" id="bicycle_gate_skips" onclick="settingLogic(this, 1)">
 			</div>
 			<div id="items">
 				<img class="item" id="Boulder_Badge">
@@ -47,15 +61,29 @@
 				<img class="item" id="SS_Ticket">
 				<img class="item" id="Bike_Voucher">
 				<img class="item" id="Bicycle">
-				<img class="item smallerItem" id="Item_Finder">
+				<img class="item" id="Item_Finder">
+				<img class="item" id="Coin_Case">
+				<img class="item" id="Lift_Key">
+				<img class="item" id="Silph_Scope">
+				<img class="item" id="Poke_Flute">
+				<img class="item" id="Card_Key">
+				<img class="item" id="Gold_Teeth">
+				<img class="item" id="Secret_Key">
 				<img class="item smallerItem" id="Tea">
-				<img class="item smallerItem" id="Coin_Case">
-				<img class="item smallerItem" id="Lift_Key">
-				<img class="item smallerItem" id="Silph_Scope">
-				<img class="item smallerItem" id="Poke_Flute">
-				<img class="item smallerItem" id="Card_Key">
-				<img class="item smallerItem" id="Gold_Teeth">
-				<img class="item smallerItem" id="Secret_Key">
+				<img class="item smallerItem" id="Hideout_Key">
+				<img class="item smallerItem" id="Safari_Pass">
+				<img class="item smallerItem" id="Plant_Key">
+				<img class="item smallerItem" id="Mansion_Key">
+				<img class="item smallerItem" id="Card_Key_2F">
+				<img class="item smallerItem" id="Card_Key_3F">
+				<img class="item smallerItem" id="Card_Key_4F">
+				<img class="item smallerItem" id="Card_Key_5F">
+				<img class="item smallerItem" id="Card_Key_6F">
+				<img class="item smallerItem" id="Card_Key_7F">
+				<img class="item smallerItem" id="Card_Key_8F">
+				<img class="item smallerItem" id="Card_Key_9F">
+				<img class="item smallerItem" id="Card_Key_10F">
+				<img class="item smallerItem" id="Card_Key_11F">
 			</div>
 			<div id="itemHoverDesc">
 				&nbsp
@@ -180,6 +208,9 @@
 				<div class="sub" id="Hidden_Item_Game_Corner_9"></div>
 				<div class="sub" id="Hidden_Item_Game_Corner_10"></div>
 				<div class="sub" id="Hidden_Item_Game_Corner_11"></div>
+				<div class="sub" id="Prize_Item_A"></div>
+				<div class="sub" id="Prize_Item_B"></div>
+				<div class="sub" id="Prize_Item_C"></div>
 				<!-- Rocket Hideout -->
 				<div class="sub" id="Hidden_Item_Rocket_Hideout_B1F"></div>
 				<div class="sub" id="Missable_Rocket_Hideout_B1F_Item_1"></div>
@@ -201,23 +232,32 @@
 			<div class="location" id="Hidden_Item_Celadon_City"></div>
 			<!--Saffron City-->
 			<div class="group" id="silph_co">
+				<div class="sub" id="Event_SKC1F"></div>
 				<div class="sub" id="Event_Scared_Woman"></div>
 				<div class="sub" id="Missable_Silph_Co_3F_Item"></div>
 				<div class="sub" id="Missable_Silph_Co_4F_Item_1"></div>
 				<div class="sub" id="Missable_Silph_Co_4F_Item_2"></div>
 				<div class="sub" id="Missable_Silph_Co_4F_Item_3"></div>
+				<div class="sub" id="Event_SKC4F"></div>
 				<div class="sub" id="Hidden_Item_Silph_Co_5F"></div>
 				<div class="sub" id="Missable_Silph_Co_5F_Item_2"></div>
 				<div class="sub" id="Missable_Silph_Co_5F_Item_1"></div>
 				<div class="sub" id="Missable_Silph_Co_5F_Item_3"></div>
+				<div class="sub" id="Event_SKC5F"></div>
 				<div class="sub" id="Missable_Silph_Co_6F_Item_1"></div>
 				<div class="sub" id="Missable_Silph_Co_6F_Item_2"></div>
+				<div class="sub" id="Event_SKC6F"></div>
 				<div class="sub" id="Missable_Silph_Co_7F_Item_1"></div>
 				<div class="sub" id="Missable_Silph_Co_7F_Item_2"></div>
+				<div class="sub" id="Event_SKC7F"></div>
+				<div class="sub" id="Event_SKC8F"></div>
 				<div class="sub" id="Hidden_Item_Silph_Co_9F"></div>
+				<div class="sub" id="Event_SKC9F"></div>
 				<div class="sub" id="Missable_Silph_Co_10F_Item_3"></div>
 				<div class="sub" id="Missable_Silph_Co_10F_Item_2"></div>
 				<div class="sub" id="Missable_Silph_Co_10F_Item_1"></div>
+				<div class="sub" id="Event_SKC10F"></div>
+				<div class="sub" id="Event_SKC11F"></div>
 				<div class="sub" id="EVENT_FREE_SILPH"></div>
 				<div class="sub" id="Event_Silph_Co_President"></div>
 			</div>
@@ -338,15 +378,13 @@
 				<div class="sub" id="Missable_Power_Plant_Item_2"></div>
 				<div class="sub" id="Hidden_Item_Power_Plant_2"></div>
 			</div>
-			<!--
 			<div class="group" id="rock_tunnel">
+				<div class="sub" id="Hidden_Item_Route_10_1"></div>
 				<div class="sub" id="Missable_Rock_Tunnel_B1F_Item_1"></div>
 				<div class="sub" id="Missable_Rock_Tunnel_B1F_Item_2"></div>
 				<div class="sub" id="Missable_Rock_Tunnel_B1F_Item_3"></div>
 				<div class="sub" id="Missable_Rock_Tunnel_B1F_Item_4"></div>
 			</div>
-			-->
-			<div class="location" id="Hidden_Item_Route_10_1"></div>
 			<div class="location" id="Hidden_Item_Route_10_2"></div>
 			<!--11-->
 			<div class="location" id="Event_Rt11_Oaks_Aide"></div>
@@ -412,7 +450,7 @@
 	<script>
 		addOnClick();
 		parseSettings();
-		hideToMatch(HIDDEN_ITEMS, "Hidden_Item_");
+		hideToMatch();
 		updateLocations();
 		updateGroups();
 		countchecks();

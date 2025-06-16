@@ -136,7 +136,7 @@ function itemOnClick(item) {
 //Settings
 //Settings - Helper
 function settingIterate(setting, max) {
-	let count = parseInt(setting.classList[1].substring(1), 10);
+	let count = getSettingValue(setting);
 	setting.classList.remove(setting.classList[1]);
 	count = count + 1;
 	if (count > max) {
@@ -160,27 +160,61 @@ function setSettingClass(div, className) {
 }
 
 //Settings - items in logic
-function hideToMatch(div, prefix) {
-	let show = parseInt(div.classList[1].substring(1), 10);
-	for (let location of document.getElementsByClassName("location")) {
-		if (location.id.substring(0,prefix.length) === prefix) {
-			ifTrueAddClass(location, !show, "hiddenhidden");
+function getSettingValue(setting) {
+	return parseInt(setting.classList[1].substring(1), 10);
+}
+function hideToMatch() {
+	let nowHidden = [];
+	if (!getSettingValue(tea)) {
+		nowHidden = nowHidden.concat(teaLocs);
+	}
+	if (!getSettingValue(extra_key_items)) {
+		nowHidden = nowHidden.concat(extrakeyitemsLocs);
+	}
+	if (!getSettingValue(split_card_key)) {
+		nowHidden = nowHidden.concat(splitsilphcardLocs);
+	}
+	if (getSettingValue(randomize_hidden_items)) {
+		nowHidden = nowHidden.concat(hiddenLocs);
+		if (!getSettingValue(stonesanity)) {
+			nowHidden = nowHidden.concat(stonesLocs);
 		}
 	}
-	for (let sub of document.getElementsByClassName("sub")) {
-		if (sub.id.substring(0,prefix.length) === prefix) {
-			ifTrueAddClass(sub, !show, "hiddenhidden");
+	if (!getSettingValue(prizesanity)) {
+		nowHidden = nowHidden.concat(prizesanityLocs);
+	}
+	for (let child of map.children) {
+		if (child.classList.contains("group")) {
+			for (let sub of child.children) {
+				sub.classList.remove("hidden");
+				if (nowHidden.includes(sub.id)) {
+					sub.classList.add("hidden");
+				}
+			}
+		}
+		else if (child.classList.contains("location")) {
+			child.classList.remove("hidden");
+			if (nowHidden.includes(child.id)) {
+				child.classList.add("hidden");
+			}
 		}
 	}
 }
-function settingOnClick(div, prefix) {
-	settingIterate(div, 1);
-	hideToMatch(div, prefix);
+function settingHide(div, count) {
+	settingIterate(div, count);
+	hideToMatch();
 	updateGroups();
 	countchecks();
 }
-function settingIterateOnClick(div, count) {
+function settingLogic(div, count) {
 	settingIterate(div, count);
+	updateLocations();
+	updateGroups();
+	countchecks();
+}
+function settingLogicHide(div, count) {
+	settingIterate(div, count);
+	hideToMatch();
 	updateLocations();
 	updateGroups();
 	countchecks();
@@ -201,8 +235,14 @@ function groupFocus(group) {
 	}
 }
 function updateGroups() {
+	if (currentGroup) {
+		groupBreakDown.innerHTML = "";
+	}
 	for (let group of document.getElementsByClassName("group")) {
 		updateGroup(group);
+	}
+	if (currentGroup) {
+		groupFocus(document.getElementById(currentGroup));
 	}
 }
 function updateGroupById(id) {
@@ -217,7 +257,7 @@ function updateGroup(group) {
 	let event = false;
 	let checked = true;
 	for (let sub of group.getElementsByClassName("sub")) {
-		if (!sub.classList.contains("hiddenhidden") && !sub.classList.contains("victoryhidden")) {
+		if (!sub.classList.contains("hidden")) {
 			hidden = false;
 			if (!sub.classList.contains("subchecked")) {
 				checked = false;
@@ -292,7 +332,7 @@ function countchecks() {
 	for (let child of map.children) {
 		if (child.classList.contains("group")) {
 			for (let sub of child.children) {
-				if (!sub.id.includes("EVENT_") && !sub.classList.contains("hiddenhidden") && !sub.classList.contains("victoryhidden")) {
+				if (!sub.id.includes("EVENT_") && !sub.classList.contains("hidden")) {
 					total = total + 1;
 					if (sub.classList.contains("subchecked")) {
 						checked = checked + 1;
@@ -304,7 +344,7 @@ function countchecks() {
 			}
 		}
 		else if (child.classList.contains("location")) {
-			if (!child.id.includes("EVENT_") && !child.classList.contains("hiddenhidden") && !child.classList.contains("victoryhidden")) {
+			if (!child.id.includes("EVENT_") && !child.classList.contains("hidden")) {
 				total = total + 1;
 				if (child.classList.contains("locationchecked")) {
 					checked = checked + 1;
