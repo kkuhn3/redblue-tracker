@@ -1,9 +1,3 @@
-// Extra Stength boulders
-// R13, right of fuschia, boulder is at the very corner of 13 and 12 (northwards route)
-// Is surfable-around
-// R11, right of vermillion, boulder(s) right in front of the gatehouse to route 12
-// Not avoidable
-
 function count_badges() {
 	let count = 0;
 	const badges = ["Boulder_Badge", "Cascade_Badge", "Thunder_Badge", "Rainbow_Badge", "Soul_Badge", "Marsh_Badge", "Volcano_Badge", "Earth_Badge"];
@@ -311,13 +305,9 @@ function can_silph() {
 }
 function can_silphCardKey(floor) {
 	if (!getSettingValue(split_card_key)) {
-		if (has("Card_Key")) {
-			return can_silph();
-		}
+		return has("Card_Key");
 	}
-	else if (has("Card_Key_" + floor + "F")) {
-		return can_silph();
-	}
+	return has("Card_Key_" + floor + "F");
 }
 function can_saffronGym() {
 	if (has("EVENT_FREE_SILPH")) {
@@ -863,19 +853,29 @@ const locationLogic = {
 		}
 	},
 	"Event_Scared_Woman": function() {
-		return can_silphCardKey(2);
+		if (can_silphCardKey(2)) {
+			return can_silph();
+		}
 	},
 	"Missable_Silph_Co_3F_Item": function() {
-		return can_silphCardKey(3);
+		if (can_silphCardKey(3) || can_silphCardKey(9)) {
+			return can_silph();
+		}
 	},
 	"Missable_Silph_Co_4F_Item_1": function() {
-		return can_silphCardKey(4);
+		if (can_silphCardKey(4)) {
+			return can_silph();
+		}
 	},
 	"Missable_Silph_Co_4F_Item_2": function() {
-		return can_silphCardKey(4);
+		if (can_silphCardKey(4)) {
+			return can_silph();
+		}
 	},
 	"Missable_Silph_Co_4F_Item_3": function() {
-		return can_silphCardKey(4);
+		if (can_silphCardKey(4)) {
+			return can_silph();
+		}
 	},
 	"Event_SKC4F": function() {
 		return can_silph();
@@ -884,22 +884,30 @@ const locationLogic = {
 		return can_areaHidden(can_silph());
 	},
 	"Missable_Silph_Co_5F_Item_1": function() {
-		return can_silphCardKey(5);
+		if (can_silphCardKey(5)) {
+			return can_silph();
+		}
 	},
 	"Missable_Silph_Co_5F_Item_2": function() {
-		return can_silphCardKey(5);
+		return can_silph();
 	},
 	"Missable_Silph_Co_5F_Item_3": function() {
 		return can_silph();
 	},
 	"Event_SKC5F": function() {
-		return can_silphCardKey(5);
+		if (can_silphCardKey(5)) {
+			return can_silph();
+		}
 	},
 	"Missable_Silph_Co_6F_Item_1": function() {
-		return can_silphCardKey(6);
+		if (can_silphCardKey(6)) {
+			return can_silph();
+		}
 	},
 	"Missable_Silph_Co_6F_Item_2": function() {
-		return can_silphCardKey(6);
+		if (can_silphCardKey(6)) {
+			return can_silph();
+		}
 	},
 	"Event_SKC6F": function() {
 		return can_silph();
@@ -908,16 +916,22 @@ const locationLogic = {
 		return can_silph();
 	},
 	"Missable_Silph_Co_7F_Item_2": function() {
-		return can_silphCardKey(7);
+		if (can_silphCardKey(7)) {
+			return can_silph();
+		}
 	},
 	"Event_SKC7F": function() {
-		return can_silphCardKey(7);
+		if (can_silphCardKey(7)) {
+			return can_silph();
+		}
 	},
 	"Event_SKC8F": function() {
 		return can_silph();
 	},
 	"Hidden_Item_Silph_Co_9F": function() {
-		return can_areaHidden(can_silphCardKey(9));
+		if (can_silphCardKey(9)) {
+			return can_areaHidden(can_silph());
+		}
 	},
 	"Event_SKC9F": function() {
 		return can_silph();
@@ -938,10 +952,14 @@ const locationLogic = {
 		return can_silph();
 	},
 	"EVENT_FREE_SILPH": function() {
-		return can_silphCardKey(11);
+		if (can_silphCardKey(11) && can_silphCardKey(3)) {
+			return can_silph(3);
+		}
 	},
 	"Event_Silph_Co_President": function() {
-		return can_silphCardKey(11);
+		if (can_silphCardKey(11) && can_silphCardKey(3)) {
+			return can_silph(3);
+		}
 	},
 	// Copycat's House
 	"Event_Copycat": function() {

@@ -2,6 +2,7 @@ let ahost = "archipelago.gg";
 let aport = false;
 let aname = false;
 let apass = "";
+let progressiveCardKeyFloor = 1;
 
 // https://github.com/ArchipelagoMW/Archipelago/blob/main/worlds/pokemon_rb/locations.py
 const offset = 172000000;
@@ -106,6 +107,10 @@ function connect() {
 function gotItem(id) {
 	let itemName = idToItem[id - offset];
 	if (itemName) {
+		if (itemName === "Progressive_Card_Key") {
+			progressiveCardKeyFloor += 1;
+			itemName = "Card_Key_" + progressiveCardKeyFloor + "F";
+		}
 		addClassName(document.getElementById(itemName), "itemchecked")
 	}
 }
