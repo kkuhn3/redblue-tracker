@@ -953,12 +953,12 @@ const locationLogic = {
 	},
 	"EVENT_FREE_SILPH": function() {
 		if (can_silphCardKey(11) && can_silphCardKey(3)) {
-			return can_silph(3);
+			return can_silph();
 		}
 	},
 	"Event_Silph_Co_President": function() {
 		if (can_silphCardKey(11) && can_silphCardKey(3)) {
-			return can_silph(3);
+			return can_silph();
 		}
 	},
 	// Copycat's House
