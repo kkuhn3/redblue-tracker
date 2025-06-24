@@ -71,26 +71,26 @@ const stonesLocs = [
 ];
 
 const teaLocs = [
-    "Event_Mansion_Lady"
+	"Event_Mansion_Lady"
 ];
 
 const extrakeyitemsLocs = [
-    "Missable_Rock_Tunnel_B1F_Item_1",
-    "Missable_Rock_Tunnel_B1F_Item_2",
-    "Missable_Rock_Tunnel_B1F_Item_3",
-    "Missable_Rock_Tunnel_B1F_Item_4"
+	"Missable_Rock_Tunnel_B1F_Item_1",
+	"Missable_Rock_Tunnel_B1F_Item_2",
+	"Missable_Rock_Tunnel_B1F_Item_3",
+	"Missable_Rock_Tunnel_B1F_Item_4"
 ];
 
 const splitsilphcardLocs = [
-    "Event_SKC1F",
-    "Event_SKC4F",
-    "Event_SKC5F",
-    "Event_SKC6F",
-    "Event_SKC7F",
-    "Event_SKC8F",
-    "Event_SKC9F",
-    "Event_SKC10F",
-    "Event_SKC11F"
+	"Event_SKC1F",
+	"Event_SKC4F",
+	"Event_SKC5F",
+	"Event_SKC6F",
+	"Event_SKC7F",
+	"Event_SKC8F",
+	"Event_SKC9F",
+	"Event_SKC10F",
+	"Event_SKC11F"
 ];
 
 const prizesanityLocs = [

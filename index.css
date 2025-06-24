@@ -27,7 +27,7 @@ body {
 	height: calc(20vw/11);
 	background-size: contain;
 	background-repeat: no-repeat;
-    background-position: center;
+	background-position: center;
 	float: left;
 	cursor: pointer;
 	background-color: #293541;
